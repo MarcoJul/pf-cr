@@ -1,6 +1,5 @@
 .main {
   /* background: linear-gradient(45deg, blue, rgb(129, 30, 30)); */
-  background-image:url(/cover.jpg);
   /* background-color: #1c1c1e; */
   height: 100vh;
   color: var(--text-white);

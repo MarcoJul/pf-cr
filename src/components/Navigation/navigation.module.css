@@ -8,8 +8,9 @@
   margin-bottom: 24px;
   max-height: 56px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-start;
   border-radius: 50px;
   max-width: 321px;
 }
@@ -24,6 +25,7 @@
 .menuList li {
   list-style-type: none;
   height: fit-content;
+  z-index: 1;
 }
 
 .menuList .navLink {
@@ -33,31 +35,37 @@
   font-size: 16px;
   isolation: isolate;
 }
-/* 
-.menuList .active .navLink {
-  border-radius: 50px;
-  position: relative;
-  background-color: #343434;
-  mix-blend-mode: color;
-} */
-/* 
-.menuList .active .navLink::before {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 1000px;
-  top: -0.1em;
-  bottom: -0.1em;
-  right: -0.1em;
-  left: -0.1em;
-  z-index: -1;
-  mix-blend-mode: color;
-  background: linear-gradient(240deg, #343434 0%, #ffffff 20%, #343434 50%);
-  background-size: 140%;
-  background-position: 0 0;
-  transition: all .3s;
-} */
 
 .menuList .navLink:hover::before {
   background-position: 100% 0;
+}
+
+.active {
+  content: '';
+  background-color: red;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .3s ease-in;
+}
+
+.home {
+  left: 0;
+  width: 50px;
+}
+
+.project {
+  left: 30px;
+  width: 100px;
+}
+
+.method {
+  left: 150px;
+  width: 80px;
+}
+
+.about {
+  left: 250px;
+  width: 50px;
 }
