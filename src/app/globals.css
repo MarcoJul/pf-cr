@@ -1,3 +1,8 @@
+:root{
+  --bg-black: #000;
+  --text-white: #fff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
