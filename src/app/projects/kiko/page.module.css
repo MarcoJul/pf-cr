@@ -1,5 +1,5 @@
 .main {
-  background: linear-gradient(45deg, blue, rgb(129, 30, 30));
+  background-image:url(/kiko/cover.jpg);
   height: 100vh;
   color: var(--text-white);
 }

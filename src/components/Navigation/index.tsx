@@ -5,7 +5,10 @@ import styles from "./navigation.module.css";
 export default function Navigation() {
   return (
     <nav className={styles.navigation}>
-      <ul className={styles.menu}>
+      <div className={styles.active}>
+        
+      </div>
+      <ul className={styles.menuList}>
         <li>
           <Link href="/">
             <Image
