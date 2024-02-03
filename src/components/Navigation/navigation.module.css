@@ -13,6 +13,7 @@
   justify-content:flex-start;
   border-radius: 50px;
   max-width: 321px;
+  overflow: hidden;
 }
 
 .menuList {
@@ -68,4 +69,20 @@
 .about {
   left: 250px;
   width: 50px;
+}
+
+.pageNavigation {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.content {
+  transition: all .3s ease-in;
+}
+
+.translateUp {
+  transform: translateY(-50%);
 }

@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./navigation.module.css";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Navigation() {
   const pathName = usePathname();
+  const router = useRouter();
 
   function getActivePosition() {
     if(pathName === '/') return styles.home;
@@ -15,9 +17,17 @@ export default function Navigation() {
     if(pathName === '/about') return styles.about;
   }
 
-  console.log(pathName);
+  function setNavigationStyle(){
+    if(pathName === '/projects/kiko') {
+      return styles.translateUp;
+    } else {
+      return '';
+    }
+  }
+
   return (
     <nav className={styles.navigation}>
+      <div className={`${styles.content} ${setNavigationStyle()}`}>
       <div className={`${styles.active} ${getActivePosition()}`}>
       </div>
       <ul className={styles.menuList}>
@@ -50,10 +60,13 @@ export default function Navigation() {
         </li>
       </ul>
       <div className={styles.pageNavigation}>
-        <p>projects</p>
+        <a onClick={()=> router.back()}>back</a>
+        <Link href="/projects">projects</Link>
         <p>/</p>
         <p>KIKO Milano</p>
       </div>
+        
+        </div>
     </nav>
   );
 }
