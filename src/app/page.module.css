@@ -1,6 +1,5 @@
 .main {
-  /* background: linear-gradient(45deg, blue, rgb(129, 30, 30)); */
-  background-color: #1c1c1e;
+  background-color: rgb(28, 28, 30); /* temporary background for homepage */
   height: 100vh;
   color: var(--text-white);
 }

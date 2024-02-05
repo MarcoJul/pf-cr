@@ -1,8 +1,8 @@
 .navigation {
-  background-color: rgba(22, 22, 24, 0.7);
+  background-color: var(--dark-light-transparent);
   backdrop-filter: blur(100px);
   position: fixed;
-  bottom:0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 24px;
@@ -10,9 +10,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   border-radius: 50px;
-  max-width: 321px;
+  max-width: var(--menu-width);
   overflow: hidden;
 }
 
@@ -37,10 +37,6 @@
   isolation: isolate;
 }
 
-.menuList .navLink:hover::before {
-  background-position: 100% 0;
-}
-
 .active {
   content: '';
   background-color: red;
@@ -48,7 +44,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: all .3s ease-in;
+  transition: all var(--nav-animation-time) ease-out;
 }
 
 .home {
@@ -72,7 +68,7 @@
 }
 
 .pageNavigation {
-  color: white;
+  color: var(--text-white);
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -80,7 +76,7 @@
 }
 
 .content {
-  transition: all .3s ease-in;
+  transition: all var(--nav-animation-time) ease-out;
 }
 
 .translateUp {
