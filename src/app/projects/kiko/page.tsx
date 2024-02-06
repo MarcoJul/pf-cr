@@ -11,8 +11,11 @@ export default function Home() {
           <p className={styles.kicker}>Composable Commerce:<br/> a continuous evolution</p>
         </div>
       </section>
-      <div className={styles.boxImage}>
-        <Image className={styles.coverImage} alt="kiko intro image" width={525} height={525} src="/kiko/intro-kiko.jpg" priority/>
+      <div className={styles.entryImage}>
+          <div className={styles.boxImage}>
+            <Image className={styles.coverImage} alt="kiko intro image" width={525} height={525} src="/kiko/intro-kiko.jpg" priority/>
+          </div>
+          <Image className={styles.oval} src="/shared/oval.svg" alt="" width={525} height={525}/>
       </div>
       <Story />
     </main>

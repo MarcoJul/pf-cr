@@ -53,6 +53,11 @@
   font-weight: 200;
 }
 
+.entryImage {
+  position: relative;
+  background-color: red;
+}
+
 .boxImage {
   position: fixed;
   z-index: 20;
@@ -65,6 +70,13 @@
   transform: translateY(-50%);
   right: 12.5vw;
   animation: fade-in-content 2s;
+}
+
+.oval {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 @keyframes fade-in-background {
