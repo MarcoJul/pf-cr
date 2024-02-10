@@ -36,6 +36,7 @@
   transform: translateY(-50%);
   top: 50%;
   left: 10vw;
+  max-width: 50%;
 }
 
 .title {
@@ -60,35 +61,6 @@
   line-height: 24px;
 }
 
-.entryImage {
-  position: relative;
-  background-color: red;
-}
-
-.boxImage {
-  position: fixed;
-  z-index: 20;
-  width: 325px;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  border-radius: 1000px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 12.5vw;
-  animation: fade-in-content 2s;
-}
-
-.oval {
-  z-index: 10;
-  position: fixed;
-  top: 51%;
-  z-index: 25;
-  transform: translateY(-50%);
-  right: 7vw;
-  animation: fade-in-oval 3s;
-}
-
 @keyframes fade-in-background {
   0%{
     opacity: 0;
@@ -98,33 +70,3 @@
   }
 }
 
-@keyframes fade-in-oval {
-  0%{
-    opacity: 0;
-    right: 5vw;
-  }
-  50%{
-    opacity: 0;
-    right: 6vw;
-  }
-  100%{
-    opacity: 1;
-    right: 7vw;
-  }
-}
-
-
-@keyframes fade-in-content {
-  0%{
-    opacity: 0;
-    top: 52%;
-  }
-  50%{
-    opacity: 0;
-    top: 51%;
-  }
-  100%{
-    opacity: 1;
-    top: 50%;
-  }
-}

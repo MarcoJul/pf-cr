@@ -1,0 +1,10 @@
+.dataSection {
+  height: 750px;
+  width: 100%;
+  border: 3px solid red;
+  background-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

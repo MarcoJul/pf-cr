@@ -1,7 +1,8 @@
-import Image from "next/image";
-import Story from "./components/story";
+import Story from "./sections/story";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Data from "@/projects/kiko/sections/data";
+import Scrolling from "./sections/scrolling";
 
 export default function Home() {
   return (
@@ -13,13 +14,9 @@ export default function Home() {
           <Link className={styles.storeLink} href="https://www.kikocosmetics.com/">kikocosmetics.com</Link>
         </div>
       </section>
-      <div className={styles.entryImage}>
-          <div className={styles.boxImage}>
-            <Image className={styles.coverImage} alt="kiko intro image" width={525} height={525} src="/kiko/intro-kiko.jpg" priority/>
-          </div>
-          <Image className={styles.oval} src="/shared/oval.svg" alt="" width={525} height={525}/>
-      </div>
       <Story />
+      <Data />
+      <Scrolling/>
     </main>
   );
 }

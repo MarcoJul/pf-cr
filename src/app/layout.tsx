@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/nav/Navigation";
 
 const bricolageGrotesque = Bricolage_Grotesque({ subsets: ["latin"] });
 

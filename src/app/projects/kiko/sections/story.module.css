@@ -1,0 +1,75 @@
+.storySection {
+  background-color: var(--dark-light);
+  height: 3500px;
+  position: relative;
+  top: 100vh;
+  margin: 0 2.5vw;
+  border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
+  transition: all .5s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentBox {
+  background-color: yellowgreen;
+  width: 100%;
+}
+
+.fullPage {
+  border-radius: 0;
+  margin: 0;
+}
+
+.textImage {
+  display: flex;
+  min-height: 1500px;
+  background-color: lightblue;
+}
+
+.textParagraph {
+  font-size: 32px;
+  line-height: 38.4px;
+  width: 40vw;
+  font-weight: 300;
+  height: 300px;
+  background-color: brown;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30%;
+  /* transform: translateY(-50%); */
+  transform: none;
+}
+
+.secondParagraph {
+  background-color:steelblue;
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 300;
+  position: absolute;
+  width: 500px;
+  height: 1000px;
+  transform: translateX(2000px);
+}
+
+.secondParagraph p {
+  position: sticky;
+  top: 30%;
+}
+
+.textParagraphFull {
+  margin-left: 2.5vw;
+}
+
+.imageSection{
+  background-color: blueviolet;
+  position: absolute;
+  top:-75vh;
+  right: 0;
+  height: 3200px;
+  width: 600px;
+}
+
+.moveToLeft {
+  left:0;
+  right: unset;
+}
