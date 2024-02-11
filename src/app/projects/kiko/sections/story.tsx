@@ -13,6 +13,8 @@ const handleScroll = () => {
   const windowHeight = window.innerHeight;
   if(windowHeight - 100 < position){
     setStoryIsVisible(true);
+  } else if (windowHeight -100 > 3500){
+    setStoryIsVisible(false);
   } else {
     setStoryIsVisible(false);
   }
