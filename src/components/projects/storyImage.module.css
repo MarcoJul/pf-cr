@@ -1,9 +1,12 @@
-.boxImage {
+.imageContent {
   position: sticky;
+  height: 525px;
   top: 25%;
+}
+
+.boxImage {
   width: 325px;
   z-index: 10;
-  max-height: 600px;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
@@ -12,27 +15,25 @@
 }
 
 .oval {
-  position: sticky;
   top: 25%;
-  width: 325px;
   z-index: 25;
-  /* transform: translateY(-100%); */
-  right: 7vw;
+  transform: translateY(-98%) translateX(-10%);
+  margin-bottom: 525px;
   animation: fade-in-oval 3s;
 }
 
 @keyframes fade-in-oval {
   0%{
     opacity: 0;
-    /* right: 5vw; */
+    transform: translateY(-120%) translateX(-30%);
   }
   50%{
     opacity: 0;
-    /* right: 6vw; */
+    transform: translateY(-110%) translateX(-20%);
   }
   100%{
     opacity: 1;
-    /* right: 7vw; */
+    transform: translateY(-98%) translateX(-10%);
   }
 }
 
