@@ -7,7 +7,7 @@
   border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
   transition: all .5s;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .fullPage {

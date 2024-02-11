@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Story from './story';
+import Scrolling from './scrolling';
 
 export default function ContainerWrapper() {
   const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -37,6 +38,7 @@ useEffect(() => {
   return (
     <div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
       <Story isFullPage={contentIsFullPage}/>
+      <Scrolling/>
     </div>
   )
 }
