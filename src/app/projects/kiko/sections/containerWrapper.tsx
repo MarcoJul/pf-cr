@@ -5,17 +5,15 @@ import Story from './story';
 
 export default function ContainerWrapper() {
   const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
+
   const handleScroll = () => {
     const position = window.scrollY;
     const windowHeight = window.innerHeight;
     if(windowHeight - 100 < position){
       setContentIsFullPage(true);
-    } else if (windowHeight -100 > 3500){
-      setContentIsFullPage(false);
     } else {
       setContentIsFullPage(false);
     }
-    console.log(position);
     const obj:HTMLElement = document.querySelector('#content')!;
     const obj2: HTMLElement = document.querySelector('#image-content')!;
     if(position > 1450 && position < 2450){
