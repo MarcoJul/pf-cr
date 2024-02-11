@@ -4,16 +4,16 @@ import styles from './containerWrapper.module.css';
 import Story from './story';
 
 export default function ContainerWrapper() {
-  const [storyIsVisible, setStoryIsVisible] = useState<boolean>(false);
+  const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
   const handleScroll = () => {
     const position = window.scrollY;
     const windowHeight = window.innerHeight;
     if(windowHeight - 100 < position){
-      setStoryIsVisible(true);
+      setContentIsFullPage(true);
     } else if (windowHeight -100 > 3500){
-      setStoryIsVisible(false);
+      setContentIsFullPage(false);
     } else {
-      setStoryIsVisible(false);
+      setContentIsFullPage(false);
     }
     console.log(position);
     const obj:HTMLElement = document.querySelector('#content')!;
@@ -37,8 +37,8 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className={`${styles.containerWrapper} ${storyIsVisible? styles.fullPage : ''}`}>
-      <Story />
+    <div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
+      <Story isFullPage={contentIsFullPage}/>
     </div>
   )
 }
