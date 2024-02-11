@@ -2,8 +2,6 @@
 import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Story from './story';
-import Data from './data';
-import Scrolling from './scrolling';
 
 export default function ContainerWrapper() {
   const [storyIsVisible, setStoryIsVisible] = useState<boolean>(false);
@@ -18,13 +16,13 @@ export default function ContainerWrapper() {
       setStoryIsVisible(false);
     }
     console.log(position);
-  // const obj:HTMLElement = document.querySelector('#content')!;
-  // if(myRef.current && position > 1450 && position < 2450){
-  //   console.log('translate', position, window.innerHeight);
-  //   obj.style.transition = "none";
-  //   obj.style.transform = 'translateX(-' + (position-1450) + 'px)';
-  //   console.log('max', 3500 - window.innerHeight * 0.75)
-  // }
+  const obj:HTMLElement = document.querySelector('#content')!;
+    if(position > 1450 && position < 2450){
+      console.log('translate', position, window.innerHeight);
+      obj.style.transition = "none";
+      obj.style.transform = 'translateX(-' + (position-1450) + 'px)';
+      console.log('max', 3500 - window.innerHeight * 0.75)
+    }
   }
 
 useEffect(() => {
@@ -37,9 +35,7 @@ useEffect(() => {
 
   return (
     <div className={`${styles.containerWrapper} ${storyIsVisible? styles.fullPage : ''}`}>
-      {/* <Story />
-      <Data />
-      <Scrolling/> */}
+      <Story />
     </div>
   )
 }

@@ -1,14 +1,17 @@
-.contentBox {
-  background-color: yellowgreen;
-  width: 100%;
-}
-.textImage {
-  display: flex;
-  min-height: 1500px;
-  background-color: lightblue;
+.storySection {
+  min-width: 100%;
 }
 
-.textParagraph {
+.textBox {
+  display: flex;
+  min-height: 1500px;
+  /* background-color: lightblue; */
+  position: relative;
+  overflow: clip;
+  min-width: 100%;
+}
+
+.text {
   font-size: 32px;
   line-height: 38.4px;
   width: 40vw;
@@ -22,20 +25,14 @@
   transform: none;
 }
 
-.secondParagraph {
-  background-color:steelblue;
+.secondText {
+  background-color: purple;
   font-size: 32px;
   line-height: 38.4px;
   font-weight: 300;
-  position: absolute;
-  width: 500px;
-  height: 1000px;
-  transform: translateX(2000px);
-}
-
-.secondParagraph p {
   position: sticky;
-  top: 30%;
+  width: 500px;
+  transform: translateX(1500px);
 }
 
 .textParagraphFull {
