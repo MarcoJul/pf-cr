@@ -38,7 +38,7 @@
   font-weight: 300;
   position: sticky;
   width: 500px;
-  transform: translateX(1500px);
+  transform: translateX(120vw);
 }
 
 .textParagraphFull {
@@ -50,11 +50,23 @@
   position: absolute;
   top:-75vh;
   right: 0;
-  height: 3200px;
+  height: 3620px;
   width: 600px;
+  padding-bottom: 100px;
 }
 
 .moveToLeft {
   left:0;
   right: unset;
+}
+
+.dataBox {
+  height: 750px;
+  width: 100%;
+  border: 3px solid red;
+  background-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

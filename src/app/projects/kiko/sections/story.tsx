@@ -15,6 +15,9 @@ export default function Story() {
               </p>
             </div>
           </div >
+          <div className={styles.dataBox}>
+            ContainerData
+          </div>
           <div id="image-content" className={styles.imageSection}>
             <StoryImage/>
           </div>
