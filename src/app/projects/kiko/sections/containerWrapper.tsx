@@ -16,11 +16,14 @@ export default function ContainerWrapper() {
       setStoryIsVisible(false);
     }
     console.log(position);
-  const obj:HTMLElement = document.querySelector('#content')!;
+    const obj:HTMLElement = document.querySelector('#content')!;
+    const obj2: HTMLElement = document.querySelector('#image-content')!;
     if(position > 1450 && position < 2450){
       console.log('translate', position, window.innerHeight);
       obj.style.transition = "none";
+      obj2.style.transition= "none";
       obj.style.transform = 'translateX(-' + (position-1450) + 'px)';
+      obj2.style.transform = 'translateX(-' + (position-1450) + 'px)';
       console.log('max', 3500 - window.innerHeight * 0.75)
     }
   }

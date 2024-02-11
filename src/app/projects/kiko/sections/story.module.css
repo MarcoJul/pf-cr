@@ -4,11 +4,17 @@
 
 .textBox {
   display: flex;
-  min-height: 1500px;
-  /* background-color: lightblue; */
+  min-height: 2000px;
+  background-color: lightblue;
   position: relative;
   overflow: clip;
   min-width: 100%;
+}
+
+.content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .text {

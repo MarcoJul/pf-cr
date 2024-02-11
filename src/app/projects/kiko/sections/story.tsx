@@ -15,9 +15,9 @@ export default function Story() {
               </p>
             </div>
           </div >
-          {/* <div className={styles.imageSection}>
+          <div id="image-content" className={styles.imageSection}>
             <StoryImage/>
-          </div> */}
+          </div>
     </section>
   );
 }
