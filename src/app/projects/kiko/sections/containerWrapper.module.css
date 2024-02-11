@@ -1,0 +1,26 @@
+.containerWrapper {
+  background-color: var(--dark-light);
+  height: 3500px; /*temporary fixed height */
+  position: relative;
+  top: 100vh;
+  margin: 0 2.5vw;
+  border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
+  transition: all .5s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fullPage {
+  border-radius: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px){
+  .containerWrapper {
+    margin: 0 16px;
+  }
+
+  .fullPage {
+    margin: 0;
+  }
+}

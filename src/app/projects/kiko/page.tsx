@@ -1,10 +1,10 @@
-import Story from "./sections/story";
 import styles from "./page.module.css";
 import Link from "next/link";
-import Data from "@/projects/kiko/sections/data";
-import Scrolling from "./sections/scrolling";
+import ContainerWrapper from "./sections/containerWrapper";
+
 
 export default function Home() {
+  
   return (
     <main className={styles.main}>
       <section id="hero" className={styles.hero}>
@@ -14,9 +14,7 @@ export default function Home() {
           <Link className={styles.storeLink} href="https://www.kikocosmetics.com/">kikocosmetics.com</Link>
         </div>
       </section>
-      <Story />
-      <Data />
-      <Scrolling/>
+      <ContainerWrapper/>
     </main>
   );
 }
