@@ -17,13 +17,17 @@ export default function ContainerWrapper() {
     }
     const obj:HTMLElement = document.querySelector('#content')!;
     const obj2: HTMLElement = document.querySelector('#image-content')!;
-    if(position > 1450 && position < 2450){
-      console.log('translate', position, window.innerHeight);
+    if(position >= 1450 && position < 2450){
+      console.log('translate', position, window.innerWidth);
       obj.style.transition = "none";
       obj2.style.transition= "none";
       obj.style.transform = 'translateX(-' + (position-1450) + 'px)';
       obj2.style.transform = 'translateX(-' + (position-1450) + 'px)';
-      console.log('max', 3500 - window.innerHeight * 0.75)
+    } else if (position < 1450){
+      obj.style.transform = 'translateX(0px)';
+      obj2.style.transform = 'translateX(0px)';
+      obj.style.transition = "all .5s";
+      obj2.style.transition= "all .5s";
     }
   }
 
