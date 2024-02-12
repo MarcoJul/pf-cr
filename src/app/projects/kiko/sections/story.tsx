@@ -10,7 +10,7 @@ export default function Story( {isFullPage} : IStoryProps) {
   return (
       <section className={styles.storySection}>
           <div  className={styles.textBox}>
-            <div id="content">
+            <div id="content" className={styles.content}>
               <p className={`${styles.text} ${isFullPage? styles.textParagraphFull : ''}`}>
                 KIKO Milano is an Italian professional cosmetics brand that features a range of cutting-edge makeup, face and body treatments. Safe and effective products of the highest quality, created to satisfy the beauty requirements of women of any age.
               </p>

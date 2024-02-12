@@ -5,16 +5,14 @@
 .textBox {
   display: flex;
   min-height: 2000px;
-  background-color: lightblue;
   position: relative;
   overflow: clip;
   min-width: 100%;
 }
 
 .content{
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  padding-top: 247px;
+  padding-left: 104px;
 }
 
 .text {
@@ -23,7 +21,6 @@
   width: 40vw;
   font-weight: 300;
   height: 300px;
-  background-color: brown;
   position: -webkit-sticky;
   position: sticky;
   top: 30%;
@@ -33,13 +30,12 @@
 }
 
 .secondText {
-  background-color: purple;
   font-size: 32px;
   line-height: 38.4px;
   font-weight: 300;
   position: sticky;
   width: 500px;
-  transform: translateX(120vw);
+  transform: translateX(100vw);
 }
 
 .textParagraphFull {
