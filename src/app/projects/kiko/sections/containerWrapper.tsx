@@ -10,6 +10,11 @@ export default function ContainerWrapper() {
   const handleScroll = () => {
     const position = window.scrollY;
     const windowHeight = window.innerHeight;
+
+    const totalWidth = window.innerWidth;
+    console.log(position, totalWidth, windowHeight);
+
+
     if(windowHeight - 100 < position){
       setContentIsFullPage(true);
     } else {
@@ -17,12 +22,13 @@ export default function ContainerWrapper() {
     }
     const obj:HTMLElement = document.querySelector('#content')!;
     const obj2: HTMLElement = document.querySelector('#image-content')!;
-    if(position >= 1450 && position < 2450){
-      console.log('translate', position, window.innerWidth);
+    if(position >= windowHeight && position < windowHeight *2){
+      // console.log('translate', position, window.innerWidth);
+      console.log('translate');
       obj.style.transition = "none";
       obj2.style.transition= "none";
-      obj.style.transform = 'translateX(-' + (position-1450) + 'px)';
-      obj2.style.transform = 'translateX(-' + (position-1450) + 'px)';
+      obj.style.transform = 'translateX(-' + (position - windowHeight) + 'px)';
+      obj2.style.transform = 'translateX(-' + (position - windowHeight) + 'px)';
     } else if (position < 1450){
       obj.style.transform = 'translateX(0px)';
       obj2.style.transform = 'translateX(0px)';
@@ -32,6 +38,7 @@ export default function ContainerWrapper() {
   }
 
 useEffect(() => {
+
   window.addEventListener('scroll', handleScroll, { passive: true });
 
   return () => {
