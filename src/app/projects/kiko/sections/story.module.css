@@ -1,75 +1,96 @@
 .storySection {
-  min-width: 100%;
+	min-width: 100%;
 }
 
 .textBox {
-  display: flex;
-  min-height: 2000px;
-  position: relative;
-  overflow: clip;
-  min-width: 100%;
+	display: flex;
+	min-height: 2000px;
+	position: relative;
+	overflow: clip;
+	min-width: 100%;
 }
 
-.content{
-  padding-top: 247px;
-  padding-left: 104px;
+.content {
+	padding-top: 247px;
+	padding-left: 104px;
 }
 
 .text {
-  font-size: 32px;
-  line-height: 38.4px;
-  width: 40vw;
-  font-weight: 300;
-  height: 300px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 40%;
-  /* transform: translateY(-50%); */
-  transform: none;
-  transition: all .5s;
+	font-size: 32px;
+	line-height: 38.4px;
+	width: 40vw;
+	font-weight: 300;
+	height: 300px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40%;
+	/* transform: translateY(-50%); */
+	transform: none;
+	transition: all .5s;
 }
 
 .secondText {
-  font-size: 32px;
-  line-height: 38.4px;
-  font-weight: 300;
-  position: sticky;
-  width: 500px;
-  transform: translateX(100vw);
+	font-size: 32px;
+	line-height: 38.4px;
+	font-weight: 300;
+	position: sticky;
+	width: 500px;
+	transform: translateX(100vw);
 }
 
 .textParagraphFull {
-  margin-left: 2.5vw;
+	margin-left: 2.5vw;
 }
 
 .imageContainerFull {
-  margin-right: 2.5vw;
+	margin-right: 2.5vw;
 }
 
-.imageSection{
-  /* background-color: blueviolet; */
-  position: absolute;
-  top:-75vh;
-  right: 0;
-  height: 3620px;
-  width: 450px;
-  padding-bottom: 100px;
-  transition: all .5s;
-  overflow: clip;
+.imageSection {
+	/* background-color: blueviolet; */
+	position: absolute;
+	top:-75vh;
+	right: 0;
+	height: 3620px;
+	width: 450px;
+	padding-bottom: 100px;
+	transition: all .5s;
+	overflow: clip;
 }
 
 .moveToLeft {
-  left:0;
-  right: unset;
+	left: 0;
+	right: unset;
 }
 
 .dataBox {
-  height: 750px;
-  width: 100%;
-  border: 3px solid red;
-  background-color: black;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	height: 750px;
+	width: 100%;
+	border: 3px solid red;
+	background-color: black;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 2000px) {
+
+	.text {
+		width: 20vw;
+	}
+
+	.secondText {
+		transform: translateX(70vw);
+	}
+
+	.imageSection {
+		right: 20vw;
+	}
+
+	.content{
+		padding-left: 104px;
+		margin-left: 20vw;
+	}
+
 }
