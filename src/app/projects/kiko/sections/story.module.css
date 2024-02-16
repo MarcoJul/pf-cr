@@ -8,6 +8,8 @@
 	position: relative;
 	overflow: clip;
 	min-width: 100%;
+	/* background-color: green; */
+	padding-bottom: 200px;
 }
 
 .content {
@@ -36,6 +38,7 @@
 	position: sticky;
 	width: 500px;
 	transform: translateX(100vw);
+	/* background-color: blue; */
 }
 
 .textParagraphFull {
@@ -51,9 +54,9 @@
 	position: absolute;
 	top:-75vh;
 	right: 0;
-	height: 3620px;
+	height: 400vh;
 	width: 450px;
-	padding-bottom: 100px;
+	padding-bottom: 200px;
 	transition: all .5s;
 	overflow: clip;
 }
@@ -64,7 +67,7 @@
 }
 
 .dataBox {
-	height: 750px;
+	height: 100vh;
 	width: 100%;
 	border: 3px solid red;
 	background-color: black;
