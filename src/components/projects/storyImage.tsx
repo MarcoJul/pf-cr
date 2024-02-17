@@ -3,7 +3,7 @@ import styles from "./storyImage.module.css"
 
 export default function StoryImage() {
   return (
-    <>
+    <div className={styles.imageContent}>
       <div className={styles.boxImage} >
         <Image
           className={styles.coverImage}
@@ -14,7 +14,7 @@ export default function StoryImage() {
           priority
         />
       </div>
-      <Image className={styles.oval} src="/shared/oval.svg" alt="" width={525} height={525} />
-    </>
+        <Image className={styles.oval} src="/shared/oval.svg" alt="" width={525} height={525} />
+    </div>
   );
 }

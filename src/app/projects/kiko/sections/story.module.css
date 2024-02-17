@@ -1,75 +1,90 @@
 .storySection {
-  background-color: var(--dark-light);
-  height: 3500px;
-  position: relative;
-  top: 100vh;
-  margin: 0 2.5vw;
-  border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
-  transition: all .5s;
-  display: flex;
-  justify-content: space-between;
+	min-width: 100%;
+  font-family: var(--font-large);
 }
 
-.contentBox {
-  background-color: yellowgreen;
-  width: 100%;
+.textBox {
+	display: flex;
+	min-height: 2000px;
+	position: relative;
+	overflow: clip;
+	min-width: 100%;
+	/* background-color: green; */
+	padding-bottom: 200px;
 }
 
-.fullPage {
-  border-radius: 0;
-  margin: 0;
+.content {
+	padding-top: 247px;
+	padding-left: 104px;
 }
 
-.textImage {
-  display: flex;
-  min-height: 1500px;
-  background-color: lightblue;
+.text {
+  font-family: var(--font-body);
+	font-size: 32px;
+	line-height: 38.4px;
+	width: 40vw;
+	font-weight: 300;
+	height: 300px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40%;
+	/* transform: translateY(-50%); */
+	transform: none;
+	transition: all .5s;
 }
 
-.textParagraph {
-  font-size: 32px;
-  line-height: 38.4px;
-  width: 40vw;
-  font-weight: 300;
-  height: 300px;
-  background-color: brown;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 30%;
-  /* transform: translateY(-50%); */
-  transform: none;
-}
-
-.secondParagraph {
-  background-color:steelblue;
-  font-size: 32px;
-  line-height: 38.4px;
-  font-weight: 300;
-  position: absolute;
-  width: 500px;
-  height: 1000px;
-  transform: translateX(2000px);
-}
-
-.secondParagraph p {
-  position: sticky;
-  top: 30%;
+.secondText {
+	font-size: 32px;
+	line-height: 38.4px;
+	font-weight: 300;
+	position: sticky;
+	width: 500px;
+	transform: translateX(100vw);
+	/* background-color: blue; */
 }
 
 .textParagraphFull {
-  margin-left: 2.5vw;
+	margin-left: 2.5vw;
 }
 
-.imageSection{
-  background-color: blueviolet;
-  position: absolute;
-  top:-75vh;
-  right: 0;
-  height: 3200px;
-  width: 600px;
+.imageContainerFull {
+	margin-right: 2.5vw;
+}
+
+.imageSection {
+	/* background-color: blueviolet; */
+	position: absolute;
+	top:-75vh;
+	right: 0;
+	height: 375vh;
+	width: 450px;
+	padding-bottom: 200px;
+	transition: all .5s;
+	overflow: clip;
 }
 
 .moveToLeft {
-  left:0;
-  right: unset;
+	left: 0;
+	right: unset;
+}
+
+@media only screen and (min-width: 2000px) {
+
+	.text {
+		width: 20vw;
+	}
+
+	.secondText {
+		transform: translateX(70vw);
+	}
+
+	.imageSection {
+		right: 20vw;
+	}
+
+	.content{
+		padding-left: 104px;
+		margin-left: 20vw;
+	}
+
 }
