@@ -22,7 +22,7 @@ export default function ContainerWrapper() {
     }
     const obj:HTMLElement = document.querySelector('#content')!;
     const obj2: HTMLElement = document.querySelector('#image-content')!;
-    if(position >= windowHeight && position < windowHeight *2 - 100){
+    if(position >= windowHeight && position < windowHeight * 2 - 100){
       // console.log('translate', position, window.innerWidth);
       console.log('translate');
       obj.style.transition = "none";

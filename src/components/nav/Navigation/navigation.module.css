@@ -14,6 +14,7 @@
   border-radius: 50px;
   max-width: var(--menu-width);
   overflow: hidden;
+  font-family: var(--font-large);
 }
 
 .menuList {
