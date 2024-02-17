@@ -10,6 +10,16 @@
 	--section-border-radius: 30px;
 	--spacing-min: 16px;
 	--spacing-card: 40px;
+
+	--font-titles-size: 16px;
+	--font-titles-weight: 700;
+	--font-titles-line-height: 1.375em;
+	--font-titles-letter-spacing: 0.02em;
+
+	--font-body-size: 16px;
+	--font-body-weight: 400;
+	--font-body-line-height: normal;
+	--font-body-letter-spacing: normal;
 }
 
 * {

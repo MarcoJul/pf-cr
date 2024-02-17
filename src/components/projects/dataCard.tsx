@@ -29,7 +29,7 @@ export default function DataCard({icon, title, text, isTextWebsite, href, isMusi
 				<a className={styles.link} href={href}>{text}</a>
 				: <div className={styles.body}>
 				{textList.length > 0 ? 
-					<ul>{textList.map(item => <li className={styles.listItem} key={item}>{item}</li>)}</ul> : <p>{text}</p>
+					<ul>{textList.map(item => <li className={styles.listItem} key={item}>{item}</li>)}</ul> : <p className={styles.listItem}>{text}</p>
 				}
 				</div>
 			}
