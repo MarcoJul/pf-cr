@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
-import Story from './story';
+import Intro from './intro';
 import Scrolling from './scrolling';
 
 export default function ContainerWrapper() {
@@ -57,7 +57,7 @@ useEffect(() => {
 
   return (
     <div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
-      <Story isFullPage={contentIsFullPage}/>
+      <Intro isFullPage={contentIsFullPage}/>
       <Scrolling/>
       <div className={styles.emptyBox}></div>
     </div>

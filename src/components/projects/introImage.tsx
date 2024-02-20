@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./storyImage.module.css"
+import styles from "./introImage.module.css"
 
-export default function StoryImage() {
+export default function introImage() {
   return (
     <div className={styles.imageContent}>
       <div className={styles.boxImage} >

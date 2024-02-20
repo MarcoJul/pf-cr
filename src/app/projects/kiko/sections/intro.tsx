@@ -1,15 +1,15 @@
 import Data from "./data";
-import styles from "./story.module.css";
-import  StoryImage  from "@/components/projects/storyImage";
+import styles from "./intro.module.css";
+import  IntroImage  from "@/components/projects/introImage";
 
-interface IStoryProps {
+interface IIntroProps {
 	isFullPage: Boolean;
 }
 
-export default function Story( {isFullPage} : IStoryProps) {
+export default function Intro( {isFullPage} : IIntroProps) {
 
 	return (
-		<section className={styles.storySection}>
+		<section className={styles.introSection}>
 			<div  className={styles.textBox}>
 				<div id="content" className={styles.content}>
 					<p className={`${styles.text} ${isFullPage? styles.textParagraphFull : ''}`}>
@@ -22,7 +22,7 @@ export default function Story( {isFullPage} : IStoryProps) {
 			</div >
 			<Data />
 			<div id="image-content" className={`${styles.imageSection} ${isFullPage? styles.imageContainerFull : ''}`}>
-				<StoryImage />
+				<IntroImage />
 			</div>
 		</section>
 	);
