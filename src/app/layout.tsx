@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/nav/Navigation";
+import Grid from "@/components/nav/grid";
 
 const bricolageGrotesque = Bricolage_Grotesque({ 
 	subsets: ["latin"], 
@@ -31,8 +32,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${bricolageGrotesque.variable} ${inter.variable} ${syne.variable}`}>{children}
-			<Navigation />
+			<body className={`${bricolageGrotesque.variable} ${inter.variable} ${syne.variable}`}>
+				{children}
+				<Navigation />
+				{/* <Grid /> */}
 			</body>
 		</html>
 	);
