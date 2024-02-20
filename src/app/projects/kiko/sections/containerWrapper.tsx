@@ -15,7 +15,7 @@ export default function ContainerWrapper() {
     console.log(position, totalWidth, windowHeight);
 
 
-    if(windowHeight - 100 < position){
+    if(windowHeight - 100 < position && position < 5000){
       setContentIsFullPage(true);
     } else {
       setContentIsFullPage(false);
@@ -39,6 +39,15 @@ export default function ContainerWrapper() {
 
 useEffect(() => {
 
+  const position = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  if(windowHeight - 100 < position && position < 5000){
+    setContentIsFullPage(true);
+  } else {
+    setContentIsFullPage(false);
+  }
+
   window.addEventListener('scroll', handleScroll, { passive: true });
 
   return () => {
@@ -50,6 +59,7 @@ useEffect(() => {
     <div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
       <Story isFullPage={contentIsFullPage}/>
       <Scrolling/>
+      <div className={styles.emptyBox}></div>
     </div>
   )
 }
