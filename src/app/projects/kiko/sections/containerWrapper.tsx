@@ -20,14 +20,14 @@ export default function ContainerWrapper() {
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 
-		if(windowHeight - 100 < position && position < 5000){
+		if(windowHeight - 100 < position && position < 6500){
 			setContentIsFullPage(true);
 		} else {
 			setContentIsFullPage(false);
 		}
 
 		//TIMESTAMP CONTROLS - TBD
-		if(position > 1500 && position < 2000){
+		if(position > 4300 && position < 5300){
 			setIsTimestampVisible(true);
 		} else {
 			setIsTimestampVisible(false);
@@ -56,7 +56,7 @@ useEffect(() => {
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-	if(windowHeight - 100 < position && position < 5000){
+	if(windowHeight - 100 < position && position < 6500){
 		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';

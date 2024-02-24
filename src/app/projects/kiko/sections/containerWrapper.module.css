@@ -1,6 +1,6 @@
 .containerWrapper {
   background-color: var(--dark-light);
-  height: 5000px; /*temporary fixed height */
+  height: 6000px; /*temporary fixed height */
   position: relative;
   top: 100vh;
   margin: 0 2.5vw;
