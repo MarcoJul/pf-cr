@@ -35,7 +35,7 @@ export default function RootLayout({
 			<body className={`${bricolageGrotesque.variable} ${inter.variable} ${syne.variable}`}>
 				{children}
 				<Navigation />
-				<Grid />
+				{/* <Grid /> */}
 			</body>
 		</html>
 	);
