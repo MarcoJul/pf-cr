@@ -12,6 +12,7 @@
   justify-content: flex-end;
   border-radius: 1000px;
   animation: fade-in-content 2s;
+  margin: 0 auto;
 }
 
 .oval {

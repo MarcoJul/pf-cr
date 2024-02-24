@@ -54,10 +54,10 @@
 .imageSection {
 	/* background-color: blueviolet; */
 	position: absolute;
-	top:-75vh;
-	right: 0;
+	top: -75vh;
+	right: 7.5vw;
 	height: 375vh;
-	width: 450px;
+	width: 30vw;
 	padding-bottom: 200px;
 	transition: all .5s;
 	overflow: clip;
@@ -68,7 +68,7 @@
 	right: unset;
 }
 
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2500px) {
 
 	.text {
 		width: 20vw;
