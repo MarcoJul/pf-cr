@@ -11,6 +11,8 @@ export default function ContainerWrapper() {
 	const handleScroll = () => {
 		const position = window.scrollY;
 		const windowHeight = window.innerHeight;
+		const windowWidth = window.innerWidth;
+		console.log('position: ', position, 'width: ', windowWidth, 'height: ', windowHeight);
 
 		const introTextContent:HTMLElement = document.querySelector('#content')!;
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
@@ -22,11 +24,13 @@ export default function ContainerWrapper() {
 			setContentIsFullPage(false);
 		}
 
-		if(position >= windowHeight && position < windowHeight * 2 - 100){
+		const translationGap = 200;
+
+		if(position >= windowHeight + translationGap && position < windowHeight + translationGap + windowWidth / 2){
 			introTextContent.style.transition = "none";
 			introImageContent.style.transition = "none";
-			introTextContent.style.transform = 'translateX(-' + (position - windowHeight) + 'px)';
-			introImageContent.style.transform = 'translateX(-' + (position - windowHeight) + 'px)';
+			introTextContent.style.transform = 'translateX(-' + (position - windowHeight - translationGap) + 'px)';
+			introImageContent.style.transform = 'translateX(-' + (position - windowHeight- translationGap) + 'px)';
 		} else if (position < 1450){
 			introTextContent.style.transform = 'translateX(0px)';
 			introImageContent.style.transform = 'translateX(0px)';
