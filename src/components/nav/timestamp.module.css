@@ -1,0 +1,12 @@
+.container {
+	background-color: yellowgreen;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all .5s;
+	transform: translateX(-100%);
+}
+
+.showContainer {
+	transform: translateX(0);
+}

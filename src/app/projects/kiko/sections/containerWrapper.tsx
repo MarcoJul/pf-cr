@@ -4,9 +4,11 @@ import styles from './containerWrapper.module.css';
 import Intro from './intro';
 import Scrolling from './scrolling';
 import StoryLine from './storyLine';
+import Timestamp from '@/components/nav/timestamp';
 
 export default function ContainerWrapper() {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
+	const [isTimestampVisible, setIsTimestampVisible] = useState<boolean>(false);
 
 	const handleScroll = () => {
 		const position = window.scrollY;
@@ -22,6 +24,13 @@ export default function ContainerWrapper() {
 			setContentIsFullPage(true);
 		} else {
 			setContentIsFullPage(false);
+		}
+
+		//TIMESTAMP CONTROLS - TBD
+		if(position > 1500 && position < 2000){
+			setIsTimestampVisible(true);
+		} else {
+			setIsTimestampVisible(false);
 		}
 
 		const translationGap = 200;
@@ -67,6 +76,7 @@ useEffect(() => {
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
 			<StoryLine />
+			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
 		</div>
 	)
