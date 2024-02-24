@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Intro from './intro';
 import Scrolling from './scrolling';
+import StoryLine from './storyLine';
 
 export default function ContainerWrapper() {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -60,7 +61,8 @@ useEffect(() => {
 	return (
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
 			<Intro isFullPage={contentIsFullPage}/>
-			<Scrolling/>
+			<Scrolling />
+			<StoryLine />
 			<div className={styles.emptyBox}></div>
 		</div>
 	)
