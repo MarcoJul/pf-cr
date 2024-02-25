@@ -1,0 +1,24 @@
+.container {
+	margin: 48px 10vw 208px;
+	display: flex;
+	justify-content: flex-end;
+	height: fit-content;
+}
+
+.imageBox {
+	width: 60vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.image {
+	border-radius: 30px;
+}
+
+.image:nth-of-type(2) {
+	transform: translateY(80px);
+}
+
+.image:nth-of-type(3) {
+	transform: translateY(160px);
+}

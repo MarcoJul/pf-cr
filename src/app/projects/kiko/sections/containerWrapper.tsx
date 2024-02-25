@@ -6,6 +6,7 @@ import Scrolling from './scrolling';
 import StoryLine from './storyLine';
 import Timestamp from '@/components/nav/timestamp';
 import { content1,content2, content3, contentX } from '@/textContent/kiko';
+import MobileMediaSection from './mobileMediaSection';
 
 export default function ContainerWrapper() {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -21,7 +22,7 @@ export default function ContainerWrapper() {
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 
-		if(windowHeight - 100 < position && position < 6500){
+		if(windowHeight - 100 < position && position < 10000){
 			setContentIsFullPage(true);
 		} else {
 			setContentIsFullPage(false);
@@ -57,7 +58,7 @@ useEffect(() => {
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-	if(windowHeight - 100 < position && position < 6500){
+	if(windowHeight - 100 < position && position < 10000){
 		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
@@ -77,10 +78,36 @@ useEffect(() => {
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
-			<StoryLine column={3} textContent={content1} imageUrl="/kiko/storyLine/2019_stylegudeD.png"/>
-			<StoryLine column={2} textContent={content2} imageUrl="/kiko/storyLine/2019_mockup.png"/>
-			<StoryLine column={3} textContent={content3} imageUrl="/kiko/storyLine/2020_appArch.png"/>
-			<StoryLine column={3} textContent={contentX} imageUrl="/kiko/storyLine/2023_conceptD.jpg"/>
+			<StoryLine
+				column={3}
+				textContent={content1}
+				imageUrl="/kiko/storyLine/2019_stylegudeD.png"
+			/>
+			<StoryLine
+				column={2}
+				textContent={content2}
+				imageUrl="/kiko/storyLine/2019_mockup.png"
+			/>
+			<StoryLine
+				column={3}
+				textContent={content3}
+				imageUrl="/kiko/storyLine/2020_appArch.png"
+			/>
+			<MobileMediaSection
+				image1="/kiko/storyline/2020_app1.jpg"
+				image2="/kiko/storyline/2020_app2.jpg"
+				image3="/kiko/storyline/2020_app3.jpg"
+			/>			
+			<MobileMediaSection
+				image1="/kiko/storyline/2020_tryon1.jpg"
+				image2="/kiko/storyline/2020_tryon2.jpg"
+				image3="/kiko/storyline/2020_tryon3.jpg"
+			/>
+			<StoryLine
+				column={3}
+				textContent={contentX}
+				imageUrl="/kiko/storyLine/2023_conceptD.jpg"
+			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
 		</div>
