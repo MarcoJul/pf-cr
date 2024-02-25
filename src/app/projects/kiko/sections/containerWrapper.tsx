@@ -6,6 +6,11 @@ import Scrolling from './scrolling';
 import StoryLine from './storyLine';
 import Timestamp from '@/components/nav/timestamp';
 
+type TextContent = {
+	title: string,
+	content: string[]
+}[]
+
 export default function ContainerWrapper() {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
 	const [isTimestampVisible, setIsTimestampVisible] = useState<boolean>(false);
@@ -71,11 +76,36 @@ useEffect(() => {
 	};
 }, []);
 
+
+const content1: TextContent = [
+	{ 
+		title: "Key Goals",
+		content: ["A mobile first design", "Promos", "Quick Buy", "Conversion Rate", "Search enhancements" ]
+	},
+	{ 
+		title: "Activities",
+		content: ["Market trend analysis", "CX analysis", "Creative Concept", "UX/UI design", "Development Support" ]
+	},
+	{ 
+		title: "Achived Results",
+		content: ["Average Order Value +5%", "Transactions +23%", "Purchase Frequency +25%", "Conversion Rate +22%" ]
+	},
+]
+
+
+const content2: TextContent = [
+	{ 
+		title: "KIKO ecommerce websige has won the following Netcomm Awards:",
+		content: ["Absolute Winner", "Best user experience", "Cross order & export" ]
+	}
+]
+
 	return (
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
-			<StoryLine />
+			<StoryLine column={3} textContent={content1} imageUrl="/kiko/storyLine/2019_stylegudeD.png"/>
+			<StoryLine column={2} textContent={content2} imageUrl="/kiko/storyLine/2019_mockup.png"/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
 		</div>
