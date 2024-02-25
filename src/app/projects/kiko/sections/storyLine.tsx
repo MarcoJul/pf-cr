@@ -3,15 +3,16 @@ import styles from './storyLine.module.css'
 import type { TextContent } from '@/types';
 
 interface IStoryLine {
+	sectionTitle?: string;
 	imageUrl: string;
 	column?: number;
 	textContent: TextContent;
 }
 
-export default function StoryLine({imageUrl, column, textContent}: IStoryLine) {
+export default function StoryLine({sectionTitle, imageUrl, column, textContent}: IStoryLine) {
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} id={sectionTitle ?? ''}>
 			<Image
 				className={styles.coverImage}
 				alt="kiko intro image"
@@ -38,7 +39,6 @@ export default function StoryLine({imageUrl, column, textContent}: IStoryLine) {
 					</div>
 					)}
 			</div>}
-			
 		</div>
 	)
 }
