@@ -5,11 +5,7 @@ import Intro from './intro';
 import Scrolling from './scrolling';
 import StoryLine from './storyLine';
 import Timestamp from '@/components/nav/timestamp';
-
-type TextContent = {
-	title: string,
-	content: string[]
-}[]
+import type { TextContent } from '@/types';
 
 export default function ContainerWrapper() {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -95,8 +91,10 @@ const content1: TextContent = [
 
 const content2: TextContent = [
 	{ 
-		title: "KIKO ecommerce websige has won the following Netcomm Awards:",
-		content: ["Absolute Winner", "Best user experience", "Cross order & export" ]
+		content: ["KIKO ecommerce websige has won the following Netcomm Awards:","Absolute Winner", "Best user experience", "Cross order & export" ]
+	},
+	{
+		contentImage: "/kiko/storyLine/netcomm-award.svg"
 	}
 ]
 

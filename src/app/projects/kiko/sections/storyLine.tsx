@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import styles from './storyLine.module.css'
+import type { TextContent } from '@/types';
 
 interface IStoryLine {
 	imageUrl: string;
 	column?: number;
-	textContent: {
-		title: string;
-		content: string[];
-	}[]
+	textContent: TextContent;
 }
 
 export default function StoryLine({imageUrl, column, textContent}: IStoryLine) {
@@ -26,13 +24,21 @@ export default function StoryLine({imageUrl, column, textContent}: IStoryLine) {
 					<div className={styles.column} key={column.title}>
 					<h4 className={styles.title}>{column.title}</h4>
 						<ul  className={styles.text}>
-							{column.content.map(txt=> 
+							{column.content?.map(txt=> 
 									<li key={txt}><span>{txt}</span></li>
 								)}
 						</ul>
+						{column.contentImage && 
+						<Image
+							alt="kiko intro image"
+							width={217}
+							height={76}
+							src={column.contentImage}
+						/>}
 					</div>
 					)}
 			</div>}
+			
 		</div>
 	)
 }
