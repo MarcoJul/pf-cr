@@ -20,25 +20,28 @@ export default function StoryLine({sectionTitle, imageUrl, column, textContent}:
 				height={512}
 				src={imageUrl}
 			/>
-			{column && <div className={column === 3 ? styles.threeTextColumn: styles.twoTextColumn}>
-				{textContent.map(column => 
-					<div className={styles.column} key={column.title}>
-					<h4 className={styles.title}>{column.title}</h4>
-						<ul  className={styles.text}>
-							{column.content?.map(txt=> 
-									<li key={txt}><span>{txt}</span></li>
-								)}
-						</ul>
-						{column.contentImage && 
-						<Image
-							alt="kiko intro image"
-							width={217}
-							height={76}
-							src={column.contentImage}
-						/>}
-					</div>
-					)}
-			</div>}
+			{column && 
+				<div 
+					className={column === 3 ? styles.threeTextColumn: styles.twoTextColumn}>
+					{textContent.map(col => 
+						<div key={Math.random()} className={styles.column}>
+						<h4 className={styles.title}>{col.title}</h4>
+							<ul  className={styles.text}>
+								{col.content?.map(txt=> 
+										<li key={Math.random()}><span>{txt}</span></li>
+									)}
+							</ul>
+							{col.contentImage && 
+							<Image
+								alt="kiko intro image"
+								width={217}
+								height={76}
+								src={col.contentImage}
+							/>}
+						</div>
+						)}
+				</div>
+			}
 		</div>
 	)
 }
