@@ -22,7 +22,7 @@
 	display: flex;
 	/* background-color: red; */
 	width: 60vw;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 1.5vw;
 }
 

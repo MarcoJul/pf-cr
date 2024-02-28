@@ -18,7 +18,7 @@ export const content1: TextContent = [
 
 export const content2: TextContent = [
 	{ 
-		content: ["KIKO ecommerce websige has won the following Netcomm Awards:","Absolute Winner", "Best user experience", "Cross order & export" ]
+		content: ["KIKO ecommerce websige has won the following Netcomm Awards:"," -> Absolute Winner", "-> Best user experience", "-> Cross order & export" ]
 	},
 	{
 		contentImage: "/kiko/storyLine/netcomm-award.svg"
@@ -38,6 +38,17 @@ export const content3: TextContent = [
 	{ 
 		title: "2022",
 		content: ["New Navigation", "New Checkout" ]
+	},
+]
+
+export const content4: TextContent = [
+	{ 
+		title: "Key Goals",
+		content: [" -> Leverage on after-pandemic, current and emerging market trends in beauty and cosmetics' world", " -> Improve Customer Experience", " -> Omnichannel: flowless experience through the whole range of brand's digital and physical touchpoints.", " -> Tailor Made: customize the entire brand experience, through AI and VR tools, online and offline personal consultations and makeup sessions."]
+	},
+	{ 
+		title: "Activities",
+		content: ["Market trend analysis", "CX Analysis", "Creative Concept", "UX/UI design", "Development support" ]
 	},
 ]
 

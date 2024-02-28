@@ -5,7 +5,7 @@ import Intro from './intro';
 import Scrolling from './scrolling';
 import StoryLine from './storyLine';
 import Timestamp from '@/components/nav/timestamp';
-import { content1,content2, content3, contentX } from '@/textContent/kiko';
+import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
 import MobileMediaSection from './mobileMediaSection';
 
 export default function ContainerWrapper({onSetImage}:any) {
@@ -106,16 +106,21 @@ useEffect(() => {
 				image1="/kiko/storyline/2020_app1.jpg"
 				image2="/kiko/storyline/2020_app2.jpg"
 				image3="/kiko/storyline/2020_app3.jpg"
-			/>			
+			/>
 			<MobileMediaSection
 				image1="/kiko/storyline/2020_tryon1.jpg"
 				image2="/kiko/storyline/2020_tryon2.jpg"
 				image3="/kiko/storyline/2020_tryon3.jpg"
 			/>
 			<StoryLine
+				column={2}
+				textContent={content4}
+				imageUrl='/kiko/storyline/2023_trioD.png'
+			/>
+			<StoryLine
 				column={3}
 				textContent={contentX}
-				imageUrl="/kiko/storyLine/2023_conceptD.jpg"
+				imageUrl="/kiko/storyLine/2023_conceptD.png"
 			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
