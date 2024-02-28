@@ -22,7 +22,7 @@ export default function ContainerWrapper({onSetImage}:any) {
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 
-		if(windowHeight - 100 < position && position < 10000){
+		if(windowHeight - 100 < position && position < 20000){
 			setContentIsFullPage(true);
 		} else {
 			setContentIsFullPage(false);
@@ -67,7 +67,7 @@ useEffect(() => {
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-	if(windowHeight - 100 < position && position < 10000){
+	if(windowHeight - 100 < position && position < 20000){
 		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
@@ -121,6 +121,11 @@ useEffect(() => {
 				column={3}
 				textContent={contentX}
 				imageUrl="/kiko/storyLine/2023_conceptD.png"
+			/>
+			<MobileMediaSection
+				image1="/kiko/storyline/2023_HP_mobile1.mp4"
+				image2="/kiko/storyline/2023_HP_mobile2.jpg"
+				image3="/kiko/storyline/2023_HP_mobile3.jpg"
 			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
