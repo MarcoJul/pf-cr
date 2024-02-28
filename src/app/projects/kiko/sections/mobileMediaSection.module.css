@@ -13,6 +13,8 @@
 
 .image {
 	border-radius: 30px;
+	width: 19vw;
+	height: auto;
 }
 
 .image:nth-of-type(2) {
