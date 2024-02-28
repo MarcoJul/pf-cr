@@ -2,17 +2,17 @@ import Image from 'next/image';
 import styles from './mobileMediaSection.module.css';
 
 interface IMobileMediaSection {
-	image1: string;
-	image2: string;
-	image3: string;
+	media1: string;
+	media2: string;
+	media3: string;
 }
 
-export default function MobileMediaSection ({image1, image2, image3}: IMobileMediaSection) {
+export default function MobileMediaSection ({media1, media2, media3}: IMobileMediaSection) {
 
 	return (
 	<div className={styles.container}>
 		<div className={styles.imageBox}>
-			{image1.includes('.mp4') ?
+			{media1.includes('.mp4') ?
 				<video 
 					className={styles.image}
 					width="216"
@@ -21,7 +21,7 @@ export default function MobileMediaSection ({image1, image2, image3}: IMobileMed
 					poster="/kiko/storyline/2020_app1.jpg"
 					preload="none"
 				>
-				<source src={image1}
+				<source src={media1}
 				type="video/mp4"
 				/> Your browser does not support the video tag.
 				</video>
@@ -31,7 +31,7 @@ export default function MobileMediaSection ({image1, image2, image3}: IMobileMed
 					alt="kiko intro image"
 					width={216}
 					height={466.5}
-					src={image1}
+					src={media1}
 				/>
 			}
 			<Image
@@ -39,14 +39,14 @@ export default function MobileMediaSection ({image1, image2, image3}: IMobileMed
 				alt="kiko intro image"
 				width={216}
 				height={466.5}
-				src={image2}
+				src={media2}
 			/>
 			<Image
 				className={styles.image}
 				alt="kiko intro image"
 				width={216}
 				height={466.5}
-				src={image3}
+				src={media3}
 			/>
 		</div>
 	</div>

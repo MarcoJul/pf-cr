@@ -22,7 +22,7 @@ export default function ContainerWrapper({onSetImage}:any) {
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 
-		if(windowHeight - 100 < position && position < 20000){
+		if(windowHeight - 100 < position && position < 15650){
 			setContentIsFullPage(true);
 		} else {
 			setContentIsFullPage(false);
@@ -67,7 +67,7 @@ useEffect(() => {
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-	if(windowHeight - 100 < position && position < 20000){
+	if(windowHeight - 100 < position && position < 15650){
 		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
@@ -103,14 +103,14 @@ useEffect(() => {
 				mediaUrl="/kiko/storyLine/2020_appArch.png"
 			/>
 			<MobileMediaSection
-				image1="/kiko/storyline/2020_app1.jpg"
-				image2="/kiko/storyline/2020_app2.jpg"
-				image3="/kiko/storyline/2020_app3.jpg"
+				media1="/kiko/storyline/2020_app1.jpg"
+				media2="/kiko/storyline/2020_app2.jpg"
+				media3="/kiko/storyline/2020_app3.jpg"
 			/>
 			<MobileMediaSection
-				image1="/kiko/storyline/2020_tryon1.jpg"
-				image2="/kiko/storyline/2020_tryon2.jpg"
-				image3="/kiko/storyline/2020_tryon3.jpg"
+				media1="/kiko/storyline/2020_tryon1.jpg"
+				media2="/kiko/storyline/2020_tryon2.jpg"
+				media3="/kiko/storyline/2020_tryon3.jpg"
 			/>
 			<StoryLine
 				column={2}
@@ -123,9 +123,9 @@ useEffect(() => {
 				mediaUrl="/kiko/storyLine/2023_conceptD.png"
 			/>
 			<MobileMediaSection
-				image1="/kiko/storyline/2023_HP_mobile1.mp4"
-				image2="/kiko/storyline/2023_HP_mobile2.jpg"
-				image3="/kiko/storyline/2023_HP_mobile3.jpg"
+				media1="/kiko/storyline/2023_HP_mobile1.mp4"
+				media2="/kiko/storyline/2023_HP_mobile2.jpg"
+				media3="/kiko/storyline/2023_HP_mobile3.jpg"
 			/>
 			<StoryLine
 				mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
@@ -134,6 +134,19 @@ useEffect(() => {
 				mediaUrl='/kiko/storyline/2023_CardTop.png'
 				secondMedia={true}
 				secondMediaUrl='/kiko/storyline/2023_CardBottom.png'
+			/>
+			<MobileMediaSection
+				media1="/kiko/storyline/2023_PDP_mobile1.mp4"
+				media2="/kiko/storyline/2023_PDP_mobile2.jpg"
+				media3="/kiko/storyline/2023_PDP_mobile3.jpg"
+			/>
+			<StoryLine
+				mediaUrl="/kiko/storyline/2023_PDP_desktop.mp4"
+			/>
+			<MobileMediaSection
+				media1="/kiko/storyline/2023_PDP_mobile4.jpg"
+				media2="/kiko/storyline/2023_PDP_mobile5.jpg"
+				media3="/kiko/storyline/2023_PDP_mobile6.jpg"
 			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
