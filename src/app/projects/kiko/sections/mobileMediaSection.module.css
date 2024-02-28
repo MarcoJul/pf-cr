@@ -12,7 +12,7 @@
 }
 
 .image {
-	border-radius: 30px;
+	border-radius: var(--mobile-media-border-radius);
 	width: 19vw;
 	height: auto;
 }

@@ -20,6 +20,9 @@
 	--font-body-weight: 400;
 	--font-body-line-height: normal;
 	--font-body-letter-spacing: normal;
+
+	--media-border-radius: 12px;
+	--mobile-media-border-radius: 20px;
 }
 
 * {

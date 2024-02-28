@@ -90,17 +90,17 @@ useEffect(() => {
 			<StoryLine
 				column={3}
 				textContent={content1}
-				imageUrl="/kiko/storyLine/2019_stylegudeD.png"
+				mediaUrl="/kiko/storyLine/2019_stylegudeD.png"
 			/>
 			<StoryLine
 				column={2}
 				textContent={content2}
-				imageUrl="/kiko/storyLine/2019_mockup.png"
+				mediaUrl="/kiko/storyLine/2019_mockup.png"
 			/>
 			<StoryLine
 				column={3}
 				textContent={content3}
-				imageUrl="/kiko/storyLine/2020_appArch.png"
+				mediaUrl="/kiko/storyLine/2020_appArch.png"
 			/>
 			<MobileMediaSection
 				image1="/kiko/storyline/2020_app1.jpg"
@@ -115,17 +115,20 @@ useEffect(() => {
 			<StoryLine
 				column={2}
 				textContent={content4}
-				imageUrl='/kiko/storyline/2023_trioD.png'
+				mediaUrl='/kiko/storyline/2023_trioD.png'
 			/>
 			<StoryLine
 				column={3}
 				textContent={contentX}
-				imageUrl="/kiko/storyLine/2023_conceptD.png"
+				mediaUrl="/kiko/storyLine/2023_conceptD.png"
 			/>
 			<MobileMediaSection
 				image1="/kiko/storyline/2023_HP_mobile1.mp4"
 				image2="/kiko/storyline/2023_HP_mobile2.jpg"
 				image3="/kiko/storyline/2023_HP_mobile3.jpg"
+			/>
+			<StoryLine
+				mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
 			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>

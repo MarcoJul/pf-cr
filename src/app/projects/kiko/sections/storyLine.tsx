@@ -4,26 +4,38 @@ import type { TextContent } from '@/types';
 
 interface IStoryLine {
 	sectionTitle?: string;
-	imageUrl: string;
+	mediaUrl: string;
 	column?: number;
-	textContent: TextContent;
+	textContent?: TextContent;
 }
 
-export default function StoryLine({sectionTitle, imageUrl, column, textContent}: IStoryLine) {
+export default function StoryLine({sectionTitle, mediaUrl, column, textContent}: IStoryLine) {
 
 	return (
 		<div className={styles.container} id={sectionTitle ?? ''}>
-			<Image
+			{mediaUrl.includes('.mp4') ? <video 
+					className={styles.coverImage}
+					width={864}
+					height={512}
+					controls
+					poster={"/kiko/storyLine/2023_conceptD.png"}
+					preload="none"
+				>
+				<source src={mediaUrl}
+				type="video/mp4"
+				/> Your browser does not support the video tag.
+				</video>
+			:<Image
 				className={styles.coverImage}
 				alt="kiko intro image"
 				width={864}
 				height={512}
-				src={imageUrl}
-			/>
+				src={mediaUrl}
+			/>}
 			{column && 
 				<div 
 					className={column === 3 ? styles.threeTextColumn: styles.twoTextColumn}>
-					{textContent.map(col => 
+					{textContent?.map(col => 
 						<div key={Math.random()} className={styles.column}>
 						<h4 className={styles.title}>{col.title}</h4>
 							<ul  className={styles.text}>
