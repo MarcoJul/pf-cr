@@ -8,7 +8,7 @@ import Timestamp from '@/components/nav/timestamp';
 import { content1,content2, content3, contentX } from '@/textContent/kiko';
 import MobileMediaSection from './mobileMediaSection';
 
-export default function ContainerWrapper() {
+export default function ContainerWrapper({onSetImage}:any) {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
 	const [isTimestampVisible, setIsTimestampVisible] = useState<boolean>(false);
 
@@ -34,6 +34,15 @@ export default function ContainerWrapper() {
 		} else {
 			setIsTimestampVisible(false);
 		}
+
+
+	if(position > 5000){
+		onSetImage(2);
+	} else if(position < 5000){
+		onSetImage(1);
+	}
+
+
 
 		const translationGap = 200;
 
