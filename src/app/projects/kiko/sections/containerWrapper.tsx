@@ -130,6 +130,11 @@ useEffect(() => {
 			<StoryLine
 				mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
 			/>
+			<StoryLine
+				mediaUrl='/kiko/storyline/2023_CardTop.png'
+				secondMedia={true}
+				secondMediaUrl='/kiko/storyline/2023_CardBottom.png'
+			/>
 			<Timestamp isVisible={isTimestampVisible}/>
 			<div className={styles.emptyBox}></div>
 		</div>

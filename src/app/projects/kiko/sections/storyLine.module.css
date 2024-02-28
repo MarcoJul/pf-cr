@@ -5,11 +5,21 @@
 	align-items: flex-end;
 }
 
+.column {
+	display: flex;
+	max-width: 60vw;
+}
+
 .coverImage {
 	width: 60vw;
 	height: auto;
 	margin-bottom: 48px;
 	border-radius: var(--media-border-radius);
+}
+
+.columnImage {
+	width: 50%;
+	height: auto;
 }
 
 .threeTextColumn {
