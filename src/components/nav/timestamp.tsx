@@ -7,8 +7,10 @@ interface ITimestamp {
 export default function Timestamp ({isVisible}: ITimestamp) {
 	return (
 		<div className={`${styles.container} ${isVisible ? styles.showContainer: ''}`}>
-			<h3>2018-2019</h3>
-			<p>E-commerce Design</p>
+			<div className={styles.textContent}>
+				<h3>2018-2019</h3>
+				<p>E-commerce Design</p>
+			</div>
 		</div>
 	)
 }
