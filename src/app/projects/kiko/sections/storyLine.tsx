@@ -31,12 +31,12 @@ export default function StoryLine({sectionTitle, mediaUrl, column, textContent, 
 					</video>
 				:
 				<Image
-				className={`${secondMedia ? styles.columnImage :styles.coverImage}`}
-				alt="kiko intro image"
-				width={864}
-				height={512}
-				src={mediaUrl}
-			/>}
+					className={`${secondMedia ? styles.columnImage : styles.coverImage}`}
+					alt="kiko intro image"
+					width={864}
+					height={512}
+					src={mediaUrl}
+				/>}
 			{secondMedia && secondMediaUrl && <Image
 				className={`${secondMedia && styles.columnImage}`}
 				alt="kiko intro image"
