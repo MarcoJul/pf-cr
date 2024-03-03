@@ -11,6 +11,21 @@
 	--spacing-min: 16px;
 	--spacing-card: 40px;
 
+	--font-3XLD-size: 80px;
+	--font-3XLD-weight: 500;
+	--font-3XLD-line-height: 0.95em;
+	--font-3XLD-letter-spacing: -0.04em;
+
+	--font-2XLgh-size: 40px;
+	--font-2XLgh-weight: 200;
+	--font-2XLgh-line-height: normal;
+	--font-2XLgh-letter-spacing: normal;
+
+	--font-XLgh-size: 32px;
+	--font-XLgh-weight: 300;
+	--font-XLgh-line-height: normal;
+	--font-XLgh-letter-spacing: normal;
+
 	--font-titles-size: 16px;
 	--font-titles-weight: 700;
 	--font-titles-line-height: 1.375em;

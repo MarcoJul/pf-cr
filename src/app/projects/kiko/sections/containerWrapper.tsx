@@ -4,10 +4,10 @@ import styles from './containerWrapper.module.css';
 import Intro from './intro';
 import Scrolling from './scrolling';
 import StoryLine from './storyLine';
-import Timestamp from '@/components/nav/timestamp';
 import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
 import MobileMediaSection from './mobileMediaSection';
 import { useInView } from "react-intersection-observer";
+import AnchorMenu from '@/components/nav/anchorMenu';
 
 export default function ContainerWrapper({onSetImage}:any) {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -154,7 +154,7 @@ useEffect(() => {
 						media3="/kiko/storyline/2023_PDP_mobile6.jpg"
 					/>
 				</div>
-				<Timestamp firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
+				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
 			</div>
 			<div className={styles.emptyBox}></div>
 		</div>

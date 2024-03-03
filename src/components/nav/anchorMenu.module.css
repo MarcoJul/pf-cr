@@ -1,0 +1,76 @@
+.container {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-left: 10vw;
+	min-width: 500px;
+	mix-blend-mode: difference;
+}
+
+.textContent {
+	position: sticky;
+	top: 50%;
+	margin: 50vh 0 50vh;
+	transform: translateY(-50%);
+}
+
+.text {
+	margin-bottom: 50px;
+	transition: all .5s;
+}
+
+.text a {
+	text-decoration: none;
+}
+
+.subText {
+	display: none;
+}
+
+.activeBox {
+	font-size: 30px;
+	transition: all .5s;
+}
+
+.activeBox .subText {
+	display: inline;
+}
+
+.activeBox .arrowIcon {
+	display: none;
+}
+
+.activeBox .mainTitle {
+	font-family: var(--font-large);
+	font-size: var(--font-3XLD-size);
+	font-weight: var(--font-3XLD-weight);
+	letter-spacing: var(--font-3XLD-letter-spacing);
+	line-height: var(--font-3XLD-line-height);
+}
+
+.subText {
+	font-family: var(--font-large);
+	font-size: var(--font-XLgh-size);
+	font-weight: var(--font-XLgh-weight);
+	letter-spacing: var(--font-XLgh-letter-spacing);
+	line-height: var(--font-XLgh-line-height);
+	color: var(--text-whitish);
+}
+
+.titleBlock {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.activeBox .lineSeparator {
+	width: 80px;
+}
+
+.lineSeparator {
+	display: block;
+	height: 1px;
+	width: 40px;
+	background: linear-gradient(45deg, white, black, white);
+}
