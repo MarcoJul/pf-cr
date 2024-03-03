@@ -87,7 +87,7 @@ useEffect(() => {
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
 			<div className={styles.storyLineContainer}>
-				<div ref={firstRef} id="first-block">
+				<div ref={firstRef} id="ecommerce-redesign">
 					<StoryLine
 						column={3}
 						textContent={content1}
@@ -99,7 +99,7 @@ useEffect(() => {
 						mediaUrl="/kiko/storyLine/2019_mockup.png"
 					/>
 				</div>
-				<div ref={secondRef} id="second-block">
+				<div ref={secondRef} id="evolutive-roadmap">
 					<StoryLine
 						column={3}
 						textContent={content3}
@@ -116,7 +116,7 @@ useEffect(() => {
 						media3="/kiko/storyline/2020_tryon3.jpg"
 					/>
 				</div>
-				<div ref={thirdRef} id="third-block">
+				<div ref={thirdRef} id="unified-commerce">
 					<StoryLine
 						column={2}
 						textContent={content4}
