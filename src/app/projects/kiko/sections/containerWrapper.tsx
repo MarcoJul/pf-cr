@@ -11,12 +11,16 @@ import { useInView } from "react-intersection-observer";
 
 export default function ContainerWrapper({onSetImage}:any) {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
-	const {ref, inView, entry} = useInView({
-		rootMargin: `-1000px`
+	const {ref: firstRef, inView : firstBlockInView} = useInView({
+		rootMargin: '-50%'
+	})
+	const {ref: secondRef, inView : secondBlockInView} = useInView({
+		rootMargin: '-50%'
+	})
+	const {ref: thirdRef, inView : thirdBlockInView} = useInView({
+		rootMargin: '-50%'
 	})
 
-
-	console.log(inView, entry);
 	const handleScroll = () => {
 		const position = window.scrollY;
 		const windowHeight = window.innerHeight;
@@ -82,69 +86,75 @@ useEffect(() => {
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
-			<div ref={ref} className={styles.storyLineContainer}>
-				<StoryLine
-					column={3}
-					textContent={content1}
-					mediaUrl="/kiko/storyLine/2019_stylegudeD.png"
-				/>
-				<StoryLine
-					column={2}
-					textContent={content2}
-					mediaUrl="/kiko/storyLine/2019_mockup.png"
-				/>
-				<StoryLine
-					column={3}
-					textContent={content3}
-					mediaUrl="/kiko/storyLine/2020_appArch.png"
-				/>
-				<MobileMediaSection
-					media1="/kiko/storyline/2020_app1.jpg"
-					media2="/kiko/storyline/2020_app2.jpg"
-					media3="/kiko/storyline/2020_app3.jpg"
-				/>
-				<MobileMediaSection
-					media1="/kiko/storyline/2020_tryon1.jpg"
-					media2="/kiko/storyline/2020_tryon2.jpg"
-					media3="/kiko/storyline/2020_tryon3.jpg"
-				/>
-				<StoryLine
-					column={2}
-					textContent={content4}
-					mediaUrl='/kiko/storyline/2023_trioD.png'
-				/>
-				<StoryLine
-					column={3}
-					textContent={contentX}
-					mediaUrl="/kiko/storyLine/2023_conceptD.png"
-				/>
-				<MobileMediaSection
-					media1="/kiko/storyline/2023_HP_mobile1.mp4"
-					media2="/kiko/storyline/2023_HP_mobile2.jpg"
-					media3="/kiko/storyline/2023_HP_mobile3.jpg"
-				/>
-				<StoryLine
-					mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
-				/>
-				<StoryLine
-					mediaUrl='/kiko/storyline/2023_CardTop.png'
-					secondMedia={true}
-					secondMediaUrl='/kiko/storyline/2023_CardBottom.png'
-				/>
-				<MobileMediaSection
-					media1="/kiko/storyline/2023_PDP_mobile1.mp4"
-					media2="/kiko/storyline/2023_PDP_mobile2.jpg"
-					media3="/kiko/storyline/2023_PDP_mobile3.jpg"
-				/>
-				<StoryLine
-					mediaUrl="/kiko/storyline/2023_PDP_desktop.mp4"
-				/>
-				<MobileMediaSection
-					media1="/kiko/storyline/2023_PDP_mobile4.jpg"
-					media2="/kiko/storyline/2023_PDP_mobile5.jpg"
-					media3="/kiko/storyline/2023_PDP_mobile6.jpg"
-				/>
-				<Timestamp/>
+			<div className={styles.storyLineContainer}>
+				<div ref={firstRef} id="first-block">
+					<StoryLine
+						column={3}
+						textContent={content1}
+						mediaUrl="/kiko/storyLine/2019_stylegudeD.png"
+					/>
+					<StoryLine
+						column={2}
+						textContent={content2}
+						mediaUrl="/kiko/storyLine/2019_mockup.png"
+					/>
+				</div>
+				<div ref={secondRef} id="second-block">
+					<StoryLine
+						column={3}
+						textContent={content3}
+						mediaUrl="/kiko/storyLine/2020_appArch.png"
+					/>
+					<MobileMediaSection
+						media1="/kiko/storyline/2020_app1.jpg"
+						media2="/kiko/storyline/2020_app2.jpg"
+						media3="/kiko/storyline/2020_app3.jpg"
+					/>
+					<MobileMediaSection
+						media1="/kiko/storyline/2020_tryon1.jpg"
+						media2="/kiko/storyline/2020_tryon2.jpg"
+						media3="/kiko/storyline/2020_tryon3.jpg"
+					/>
+				</div>
+				<div ref={thirdRef} id="third-block">
+					<StoryLine
+						column={2}
+						textContent={content4}
+						mediaUrl='/kiko/storyline/2023_trioD.png'
+					/>
+					<StoryLine
+						column={3}
+						textContent={contentX}
+						mediaUrl="/kiko/storyLine/2023_conceptD.png"
+					/>
+					<MobileMediaSection
+						media1="/kiko/storyline/2023_HP_mobile1.mp4"
+						media2="/kiko/storyline/2023_HP_mobile2.jpg"
+						media3="/kiko/storyline/2023_HP_mobile3.jpg"
+					/>
+					<StoryLine
+						mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
+					/>
+					<StoryLine
+						mediaUrl='/kiko/storyline/2023_CardTop.png'
+						secondMedia={true}
+						secondMediaUrl='/kiko/storyline/2023_CardBottom.png'
+					/>
+					<MobileMediaSection
+						media1="/kiko/storyline/2023_PDP_mobile1.mp4"
+						media2="/kiko/storyline/2023_PDP_mobile2.jpg"
+						media3="/kiko/storyline/2023_PDP_mobile3.jpg"
+					/>
+					<StoryLine
+						mediaUrl="/kiko/storyline/2023_PDP_desktop.mp4"
+					/>
+					<MobileMediaSection
+						media1="/kiko/storyline/2023_PDP_mobile4.jpg"
+						media2="/kiko/storyline/2023_PDP_mobile5.jpg"
+						media3="/kiko/storyline/2023_PDP_mobile6.jpg"
+					/>
+				</div>
+				<Timestamp firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
 			</div>
 			<div className={styles.emptyBox}></div>
 		</div>

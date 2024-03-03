@@ -1,11 +1,28 @@
 import styles from './timestamp.module.css'
 
-export default function Timestamp () {
+interface ITimestamp {
+	firstActive: boolean;
+	secondActive: boolean;
+	thirdActive: boolean;
+}
+
+export default function Timestamp ({firstActive, secondActive, thirdActive}: ITimestamp) {
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.textContent}>
-				<h3>2018-2019</h3>
-				<p>E-commerce Design</p>
+				<div className={`${styles.text} ${firstActive ? styles.box: ''}`}>
+					<h3>2018-2019</h3>
+					<p className={styles.subText}>E-commerce Redesign</p>
+				</div>
+				<div className={`${styles.text} ${secondActive ? styles.box: ''}`}>
+					<h3>2020-2022</h3>
+					<p className={styles.subText}>Evolutive Roadmap</p>
+				</div>
+				<div className={`${styles.text} ${thirdActive ? styles.box: ''}`}>
+					<h3>2023-2024</h3>
+					<p className={styles.subText}>Unified commerce</p>
+				</div>
 			</div>
 		</div>
 	)
