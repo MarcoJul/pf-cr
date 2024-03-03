@@ -17,7 +17,6 @@
 
 .text {
 	margin-bottom: 50px;
-	transition: all .5s;
 }
 
 .text a {
@@ -30,7 +29,6 @@
 
 .activeBox {
 	font-size: 30px;
-	transition: all .5s;
 }
 
 .activeBox .subText {
@@ -47,6 +45,7 @@
 	font-weight: var(--font-3XLD-weight);
 	letter-spacing: var(--font-3XLD-letter-spacing);
 	line-height: var(--font-3XLD-line-height);
+	transition: all .5s;
 }
 
 .subText {
@@ -62,10 +61,12 @@
 	display: flex;
 	align-items: center;
 	gap: 4px;
+	transition: all .5s;
 }
 
 .activeBox .lineSeparator {
 	width: 80px;
+	transition: all .5s;
 }
 
 .lineSeparator {
