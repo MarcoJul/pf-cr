@@ -39,6 +39,10 @@
 	display: none;
 }
 
+.arrowIcon{
+	fill: var(--text-light-transparent);
+}
+
 .mainTitle {
 	color: var(--text-light-transparent);
 	transition: all .5s;
