@@ -16,7 +16,7 @@
 }
 
 .text {
-	margin-bottom: 50px;
+	margin-bottom: 18px;
 }
 
 .text a {
@@ -41,10 +41,17 @@
 
 .arrowIcon{
 	fill: var(--text-light-transparent);
+	width: 32px;
+	height: 32px;
 }
 
 .mainTitle {
 	color: var(--text-light-transparent);
+	font-family: var(--font-large);
+	font-size: var(--font-XLgh-size);
+	font-weight: var(--font-XLgh-weight);
+	letter-spacing: var(--font-XLgh-letter-spacing);
+	line-height: var(--font-XLgh-line-height);
 	transition: all .5s;
 }
 
