@@ -131,9 +131,11 @@ useEffect(() => {
 						media1="/kiko/storyline/2023_HP_mobile1.mp4"
 						media2="/kiko/storyline/2023_HP_mobile2.jpg"
 						media3="/kiko/storyline/2023_HP_mobile3.jpg"
+						poster="/kiko/storyline/2023_HP_mobile1_poster.jpg"
 					/>
 					<StoryLine
 						mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
+						poster="/kiko/storyline/2023_HP_desktop_poster.jpg"
 					/>
 					<StoryLine
 						mediaUrl='/kiko/storyline/2023_CardTop.png'
@@ -144,9 +146,11 @@ useEffect(() => {
 						media1="/kiko/storyline/2023_PDP_mobile1.mp4"
 						media2="/kiko/storyline/2023_PDP_mobile2.jpg"
 						media3="/kiko/storyline/2023_PDP_mobile3.jpg"
+						poster="/kiko/storyline/2023_PDP_mobile1_poster.jpg"
 					/>
 					<StoryLine
 						mediaUrl="/kiko/storyline/2023_PDP_desktop.mp4"
+						poster="/kiko/storyline/2023_PDP_desktop_poster.jpg"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyline/2023_PDP_mobile4.jpg"

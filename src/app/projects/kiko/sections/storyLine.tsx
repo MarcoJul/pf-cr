@@ -9,20 +9,21 @@ interface IStoryLine {
 	textContent?: TextContent;
 	secondMedia?: boolean;
 	secondMediaUrl?: string;
+	poster?: string;
 }
 
-export default function StoryLine({sectionTitle, mediaUrl, column, textContent, secondMedia, secondMediaUrl}: IStoryLine) {
+export default function StoryLine({sectionTitle, mediaUrl, column, textContent, secondMedia, secondMediaUrl, poster}: IStoryLine) {
 
 	return (
 		<div className={styles.container} id={sectionTitle ?? ''}>
-			<div className={`${secondMedia && styles.column}`}>
+			<div className={`${secondMedia && styles.twoColumnImage}`}>
 				{mediaUrl.includes('.mp4') ? 
 					<video 
 						className={styles.coverImage}
 						width={864}
 						height={512}
 						controls
-						poster={"/kiko/storyLine/2023_conceptD.png"}
+						poster={poster}
 						preload="none"
 						>
 						<source src={mediaUrl}

@@ -24,6 +24,10 @@
 	height: auto;
 }
 
+.twoColumnImage {
+	max-width: 60vw;
+}
+
 .threeTextColumn {
 	display: flex;
 	/* background-color: red; */

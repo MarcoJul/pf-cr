@@ -5,20 +5,21 @@ interface IMobileMediaSection {
 	media1: string;
 	media2: string;
 	media3: string;
+	poster?: string;
 }
 
-export default function MobileMediaSection ({media1, media2, media3}: IMobileMediaSection) {
+export default function MobileMediaSection ({media1, media2, media3, poster }: IMobileMediaSection) {
 
 	return (
 	<div className={styles.container}>
 		<div className={styles.imageBox}>
-			{media1.includes('.mp4') ?
+			{media1.includes('.mp4') && poster ?
 				<video 
 					className={styles.image}
 					width="216"
 					height="466.5"
 					controls
-					poster="/kiko/storyline/2020_app1.jpg"
+					poster={poster}
 					preload="none"
 				>
 				<source src={media1}
