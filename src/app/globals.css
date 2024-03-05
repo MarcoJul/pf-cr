@@ -1,7 +1,8 @@
 :root {
 	--bg-black: #000;
-	--text-white: #fff;
+	--text-color-contrast: #fff;
 	--text-whitish: rgba(208, 208, 209, 1);
+	--text-light-transparent: rgba(255, 255, 255, 0.4);
 	--dark-light: rgba(22, 22, 24, 1);
 	--dark-light-transparent: rgba(22, 22, 24, 0.7);
 	--menu-width: 321px;

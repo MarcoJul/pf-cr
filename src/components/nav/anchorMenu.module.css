@@ -39,7 +39,13 @@
 	display: none;
 }
 
+.mainTitle {
+	color: var(--text-light-transparent);
+	transition: all .5s;
+}
+
 .activeBox .mainTitle {
+	color: var(--text-color-contrast);
 	font-family: var(--font-large);
 	font-size: var(--font-3XLD-size);
 	font-weight: var(--font-3XLD-weight);

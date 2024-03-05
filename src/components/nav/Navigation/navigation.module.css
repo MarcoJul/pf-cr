@@ -32,7 +32,7 @@
 
 .menuList .navLink {
   padding: 6px 12px;
-  color: var(--text-white);
+  color: var(--text-color-contrast);
   text-decoration: none;
   font-size: 16px;
   isolation: isolate;
@@ -69,7 +69,7 @@
 }
 
 .pageNavigation {
-  color: var(--text-white);
+  color: var(--text-color-contrast);
   display: flex;
   justify-content: space-between;
   width: 100%;

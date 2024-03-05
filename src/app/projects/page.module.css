@@ -1,9 +1,9 @@
 .main {
   background: linear-gradient(45deg, blue, rgb(129, 30, 30));
   height: 100vh;
-  color: var(--text-white);
+  color: var(--text-color-contrast);
 }
 
 .main a {
-  color: var(--text-white);
+  color: var(--text-color-contrast);
 }

@@ -1,5 +1,5 @@
 .main {
   background-color: rgb(28, 28, 30); /* temporary background for homepage */
   height: 100vh;
-  color: var(--text-white);
+  color: var(--text-color-contrast);
 }

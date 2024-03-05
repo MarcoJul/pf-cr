@@ -1,10 +1,10 @@
 .main {
   height: 100vh;
-  color: var(--text-white);
+  color: var(--text-color-contrast);
 }
 
 .main a {
-  color: var(--text-white);
+  color: var(--text-color-contrast);
 }
 
 .hero {
@@ -37,7 +37,7 @@
 }
 
 .heroTextBox {
-  color: var(--text-white);
+  color: var(--text-color-contrast);
   z-index: 10;
   position: relative;
   animation: fade-in-content 2s;
