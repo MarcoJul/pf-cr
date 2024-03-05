@@ -106,21 +106,21 @@ useEffect(() => {
 						mediaUrl="/kiko/storyLine/2020_appArch.png"
 					/>
 					<MobileMediaSection
-						media1="/kiko/storyline/2020_app1.jpg"
-						media2="/kiko/storyline/2020_app2.jpg"
-						media3="/kiko/storyline/2020_app3.jpg"
+						media1="/kiko/storyLine/2020_app1.jpg"
+						media2="/kiko/storyLine/2020_app2.jpg"
+						media3="/kiko/storyLine/2020_app3.jpg"
 					/>
 					<MobileMediaSection
-						media1="/kiko/storyline/2020_tryon1.jpg"
-						media2="/kiko/storyline/2020_tryon2.jpg"
-						media3="/kiko/storyline/2020_tryon3.jpg"
+						media1="/kiko/storyLine/2020_tryon1.jpg"
+						media2="/kiko/storyLine/2020_tryon2.jpg"
+						media3="/kiko/storyLine/2020_tryon3.jpg"
 					/>
 				</div>
 				<div ref={thirdRef} id="unified-commerce">
 					<StoryLine
 						column={2}
 						textContent={content4}
-						mediaUrl='/kiko/storyline/2023_trioD.png'
+						mediaUrl='/kiko/storyLine/2023_trioD.png'
 					/>
 					<StoryLine
 						column={3}
@@ -128,34 +128,34 @@ useEffect(() => {
 						mediaUrl="/kiko/storyLine/2023_conceptD.png"
 					/>
 					<MobileMediaSection
-						media1="/kiko/storyline/2023_HP_mobile1.mp4"
-						media2="/kiko/storyline/2023_HP_mobile2.jpg"
-						media3="/kiko/storyline/2023_HP_mobile3.jpg"
-						poster="/kiko/storyline/2023_HP_mobile1_poster.jpg"
+						media1="/kiko/storyLine/2023_HP_mobile1.mp4"
+						media2="/kiko/storyLine/2023_HP_mobile2.jpg"
+						media3="/kiko/storyLine/2023_HP_mobile3.jpg"
+						poster="/kiko/storyLine/2023_HP_mobile1_poster.jpg"
 					/>
 					<StoryLine
-						mediaUrl="/kiko/storyline/2023_HP_desktop.mp4"
-						poster="/kiko/storyline/2023_HP_desktop_poster.jpg"
+						mediaUrl="/kiko/storyLine/2023_HP_desktop.mp4"
+						poster="/kiko/storyLine/2023_HP_desktop_poster.jpg"
 					/>
 					<StoryLine
-						mediaUrl='/kiko/storyline/2023_CardTop.png'
+						mediaUrl='/kiko/storyLine/2023_CardTop.png'
 						secondMedia={true}
-						secondMediaUrl='/kiko/storyline/2023_CardBottom.png'
+						secondMediaUrl='/kiko/storyLine/2023_CardBottom.png'
 					/>
 					<MobileMediaSection
-						media1="/kiko/storyline/2023_PDP_mobile1.mp4"
-						media2="/kiko/storyline/2023_PDP_mobile2.jpg"
-						media3="/kiko/storyline/2023_PDP_mobile3.jpg"
-						poster="/kiko/storyline/2023_PDP_mobile1_poster.jpg"
+						media1="/kiko/storyLine/2023_PDP_mobile1.mp4"
+						media2="/kiko/storyLine/2023_PDP_mobile2.jpg"
+						media3="/kiko/storyLine/2023_PDP_mobile3.jpg"
+						poster="/kiko/storyLine/2023_PDP_mobile1_poster.jpg"
 					/>
 					<StoryLine
-						mediaUrl="/kiko/storyline/2023_PDP_desktop.mp4"
-						poster="/kiko/storyline/2023_PDP_desktop_poster.jpg"
+						mediaUrl="/kiko/storyLine/2023_PDP_desktop.mp4"
+						poster="/kiko/storyLine/2023_PDP_desktop_poster.jpg"
 					/>
 					<MobileMediaSection
-						media1="/kiko/storyline/2023_PDP_mobile4.jpg"
-						media2="/kiko/storyline/2023_PDP_mobile5.jpg"
-						media3="/kiko/storyline/2023_PDP_mobile6.jpg"
+						media1="/kiko/storyLine/2023_PDP_mobile4.jpg"
+						media2="/kiko/storyLine/2023_PDP_mobile5.jpg"
+						media3="/kiko/storyLine/2023_PDP_mobile6.jpg"
 					/>
 				</div>
 				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
