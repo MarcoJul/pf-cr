@@ -16,25 +16,23 @@
 }
 
 .oval {
-  top: 25%;
-  z-index: 25;
-  transform: translateY(-98%) translateX(-10%);
-  margin-bottom: 525px;
+	width: 100%;
+  transform: translateY(-98%) translateX(5px);
   animation: fade-in-oval 3s;
 }
 
 @keyframes fade-in-oval {
   0%{
     opacity: 0;
-    transform: translateY(-120%) translateX(-30%);
+    transform: translateY(-105%) translateX(20px);
   }
   50%{
     opacity: 0;
-    transform: translateY(-110%) translateX(-20%);
+    transform: translateY(-102%) translateX(10px);
   }
   100%{
     opacity: 1;
-    transform: translateY(-98%) translateX(-10%);
+    transform: translateY(-98%) translateX(5px);
   }
 }
 
