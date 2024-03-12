@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Intro from './intro';
 import Scrolling from './scrolling';
-import StoryLine from './storyLine';
+import StoryLine from '@/components/projects/storyLine';
 import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
-import MobileMediaSection from './mobileMediaSection';
+import MobileMediaSection from '@/components/projects/mobileMediaSection';
 import { useInView } from "react-intersection-observer";
 import AnchorMenu from '@/components/nav/anchorMenu';
 
