@@ -8,7 +8,7 @@ interface IMobileMediaSection {
 	poster?: string;
 }
 
-export default function MobileMediaSection ({media1, media2, media3, poster }: IMobileMediaSection) {
+export default function MobileMediaSection ({ media1, media2, media3, poster }: IMobileMediaSection) {
 
 	return (
 	<div className={styles.container}>

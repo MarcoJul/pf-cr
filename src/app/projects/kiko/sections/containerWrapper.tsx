@@ -20,6 +20,11 @@ export default function ContainerWrapper({onSetImage}:any) {
 	const {ref: thirdRef, inView : thirdBlockInView} = useInView({
 		rootMargin: '-50%'
 	})
+	const {ref: containerRef, inView : isEndOfPage} = useInView({
+		threshold: 0.2,
+	})
+
+	console.log('isEndOfPage', contentIsFullPage);
 
 	const handleScroll = () => {
 		const position = window.scrollY;
@@ -31,7 +36,7 @@ export default function ContainerWrapper({onSetImage}:any) {
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 
-	if(windowHeight - 100 < position && position < 15650){
+	if(windowHeight - 100 < position || isEndOfPage){
 		setContentIsFullPage(true);
 	} else {
 		setContentIsFullPage(false);
@@ -66,11 +71,13 @@ useEffect(() => {
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-	if(windowHeight - 100 < position && position < 15650){
+	if(windowHeight - 100 < position ){
 		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-	} else {
+	} 
+	if(isEndOfPage) {
+		console.log('end');
 		setContentIsFullPage(false);
 	}
 
@@ -84,6 +91,7 @@ useEffect(() => {
 
 	return (
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
+			<div className={styles.intersectionRef}></div>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
 			<div className={styles.storyLineContainer}>
@@ -160,7 +168,7 @@ useEffect(() => {
 				</div>
 				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
 			</div>
-			<div className={styles.emptyBox}></div>
+			<div ref={containerRef} className={styles.emptyBox}></div>
 		</div>
 	)
 }

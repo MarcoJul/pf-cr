@@ -83,6 +83,10 @@
 		margin-left: 20vw;
 	}
 
+	.imageSection {
+		top: -90vh;
+	}
+
 }
 
 @media only screen and (max-height: 1000px) {
