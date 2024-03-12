@@ -11,6 +11,7 @@ import AnchorMenu from '@/components/nav/anchorMenu';
 
 export default function ContainerWrapper({onSetImage}:any) {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
+	const [pagePosition, setPagePosition] = useState<string>('');
 	const {ref: firstRef, inView : firstBlockInView} = useInView({
 		rootMargin: '-50%'
 	})
@@ -20,33 +21,38 @@ export default function ContainerWrapper({onSetImage}:any) {
 	const {ref: thirdRef, inView : thirdBlockInView} = useInView({
 		rootMargin: '-50%'
 	})
-	const {ref: containerRef, inView : isEndOfPage} = useInView({
+
+	const {ref: introContainerRef } = useInView({
 		threshold: 0.2,
+		onChange: (event, entry)=> {
+			setPagePosition(entry.isIntersecting ? 'top' : '');
+			if(pagePosition === 'bottom') return;
+			setContentIsFullPage(()=> !event);
+		}
 	})
 
-	console.log('isEndOfPage', contentIsFullPage);
+	const {ref: outroContainerRef } = useInView({
+		threshold: 0.7,
+		onChange: (event, entry)=> {
+			setPagePosition(entry.isIntersecting ? 'bottom' : '');
+			if(pagePosition === 'top') return;
+			setContentIsFullPage(()=> !event)
+		}
+	})
 
 	const handleScroll = () => {
 		const position = window.scrollY;
 		const windowHeight = window.innerHeight;
 		const windowWidth = window.innerWidth;
-		// console.log('position: ', position, 'width: ', windowWidth, 'height: ', windowHeight);
 
 		const introTextContent:HTMLElement = document.querySelector('#content')!;
 		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
-
-	if(windowHeight - 100 < position || isEndOfPage){
-		setContentIsFullPage(true);
-	} else {
-		setContentIsFullPage(false);
-	}
-
-	if(position > 5000){
-		onSetImage(2);
-	} else if(position < 5000){
-		onSetImage(1);
-	}
+		if(position > 5000){
+			onSetImage(2);
+		} else if(position < 5000){
+			onSetImage(1);
+		}
 
 		const translationGap = 200;
 
@@ -68,17 +74,14 @@ useEffect(() => {
 	const position = window.scrollY;
 	const windowHeight = window.innerHeight;
 
+	setPagePosition(position < windowHeight ? 'top' : 'bottom');
+
 	const introTextContent:HTMLElement = document.querySelector('#content')!;
 	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
 
 	if(windowHeight - 100 < position ){
-		setContentIsFullPage(true);
 		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
 		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-	} 
-	if(isEndOfPage) {
-		console.log('end');
-		setContentIsFullPage(false);
 	}
 
 	window.addEventListener('scroll', handleScroll, { passive: true });
@@ -91,7 +94,7 @@ useEffect(() => {
 
 	return (
 		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
-			<div className={styles.intersectionRef}></div>
+			<div ref={introContainerRef} className={styles.intersectionRef}></div>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />
 			<div className={styles.storyLineContainer}>
@@ -168,7 +171,7 @@ useEffect(() => {
 				</div>
 				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
 			</div>
-			<div ref={containerRef} className={styles.emptyBox}></div>
+			<div ref={outroContainerRef} className={styles.emptyBox}></div>
 		</div>
 	)
 }

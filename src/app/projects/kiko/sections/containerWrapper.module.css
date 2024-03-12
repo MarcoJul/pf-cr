@@ -19,6 +19,16 @@
 	position: relative;
 }
 
+.intersectionRef {
+	/* background-color: rgba(240, 128, 128, 0.489); */
+	height: 100vh;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	top: -100vh;
+	pointer-events: none;
+}
+
 .emptyBox {
 	height: 100vh;
 	width: 100%;
@@ -26,6 +36,7 @@
 	position: absolute;
 	bottom: -100vh;
 	pointer-events: none;
+	/* background-color: rgba(173, 216, 230, 0.537); */
 }
 
 @media only screen and (max-width: 800px){
