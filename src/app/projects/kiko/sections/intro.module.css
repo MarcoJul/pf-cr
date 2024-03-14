@@ -1,6 +1,8 @@
 .introSection {
 	min-width: 100%;
   font-family: var(--font-large);
+	/* background-color: rgba(240, 128, 128, 0.388); */
+	position: relative;
 }
 
 .textBox {
@@ -9,13 +11,13 @@
 	position: relative;
 	overflow: clip;
 	min-width: 100%;
-	/* background-color: green; */
 	padding-bottom: 200px;
 }
 
 .content {
 	padding-top: 247px;
 	padding-left: 7.5vw;
+	/* background-color: green; */
 }
 
 .text {
@@ -31,6 +33,7 @@
 	/* transform: translateY(-50%); */
 	transform: none;
 	transition: all .5s;
+	padding-right: 2vw;
 }
 
 .secondText {
@@ -38,8 +41,8 @@
 	line-height: 38.4px;
 	font-weight: 300;
 	position: sticky;
-	width: 500px;
-	transform: translateX(100vw);
+	width: 40vw;
+	transform: translateX(92vw);
 	/* background-color: blue; */
 }
 
@@ -56,11 +59,12 @@
 	position: absolute;
 	top: -75vh;
 	right: 7.5vw;
-	height: 375vh;
+	height: calc(100% + 75vh);
 	width: 30vw;
 	padding-bottom: 200px;
 	transition: all .5s;
 	overflow: clip;
+	z-index: 200;
 }
 
 .moveToLeft {
@@ -68,23 +72,28 @@
 	right: unset;
 }
 
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 2000px) {
 
 	.text {
-		width: 20vw;
+		/* width: 20vw; */
 	}
-
+/* 
 	.secondText {
 		transform: translateX(70vw);
-	}
+	} */
 
 	.content{
-		padding-left: 104px;
-		margin-left: 20vw;
+		/* padding-left: 104px;
+		margin-left: 20vw; */
 	}
 
 	.imageSection {
 		top: -90vh;
+		height: calc(100% + 90vh);
+	}
+
+	.introSection {
+		padding-bottom: 20vh;
 	}
 
 }
