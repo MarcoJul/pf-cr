@@ -20,8 +20,8 @@
 .menuList {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-between;
+  min-height: 56px;
 }
 
 .menuList li {
@@ -31,41 +31,61 @@
 }
 
 .menuList .navLink {
-  padding: 6px 12px;
+  padding: 6px 16px;
   color: var(--text-color-contrast);
   text-decoration: none;
   font-size: 16px;
   isolation: isolate;
 }
 
+.homeLink {
+	display: flex;
+	padding-left: 8px;
+}
+
+a.navLink.lastLink {
+	padding-right: 26px;
+}
+
 .active {
-  content: '';
-  background-color: red;
-  height: 30px;
+  background-color: black;
+	width: 100%;
+	height: 100%;
+	border-radius: 1000px;
+}
+
+.borderActive {
+	background: linear-gradient(240deg, #343434 20%, #ffffff 50%, #343434 80%);
+	content: '';
+  background-color: black;
+  height: 40px;
+	border-radius: 1000px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: all var(--nav-animation-time) ease-out;
+	background-color: black;
+	padding: .5px;
 }
 
 .home {
-  left: 0;
-  width: 50px;
+  left: 9px;
+  width: 40px;
 }
 
 .project {
-  left: 30px;
-  width: 100px;
+  left: 50px;
+  width: 96px;
 }
 
 .method {
-  left: 150px;
-  width: 80px;
+  left: 146px;
+  width: 91px;
 }
 
 .about {
-  left: 250px;
-  width: 50px;
+  left: 235px;
+  width: 78px;
 }
 
 .pageNavigation {

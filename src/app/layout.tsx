@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, Syne } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/nav/Navigation";
+import Navigation from "@/components/nav/navigation";
 import Grid from "@/components/nav/grid";
 
 const bricolageGrotesque = Bricolage_Grotesque({ 
