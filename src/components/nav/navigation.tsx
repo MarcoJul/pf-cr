@@ -29,46 +29,53 @@ export default function Navigation() {
 		<nav className={styles.navigation}>
 			<div className={`${styles.content} ${setNavigationStyle()}`}>
 				<div className={`${styles.borderActive} ${getActivePosition()}`}>
-					<div className={`${styles.active}`}>
+					<div className={`${styles.active}`}></div>
 				</div>
-			</div>
-			<ul className={styles.menuList}>
-				<li>
-					<Link href="/" className={styles.homeLink}>
+				<ul className={styles.menuList}>
+					<li>
+						<Link href="/" className={styles.homeLink}>
+							<Image
+								src="/MenuIcon.svg"
+								className={styles.menuIcon}
+								alt="Go to homepage"
+								width={48}
+								height={48}
+								priority
+							/>
+						</Link>
+					</li>
+					<li>
+						<Link className={styles.navLink} href="/projects">
+							Projects
+						</Link>
+					</li>
+					<li>
+						<Link className={styles.navLink} href="/method">
+							Method
+						</Link>
+					</li>
+					<li>
+						<Link className={`${styles.navLink} ${styles.lastLink}`} href="/about">
+							About
+						</Link>
+					</li>
+				</ul>
+				<div className={styles.pageNavigation}>
+					<a onClick={()=> router.back()} className={styles.backButton}>
 						<Image
-							src="/MenuIcon.svg"
-							className={styles.menuIcon}
+							src="/shared/icon-arrow-left.svg"
+							className={styles.backIcon}
 							alt="Go to homepage"
 							width={48}
 							height={48}
 							priority
 						/>
-					</Link>
-				</li>
-				<li>
-					<Link className={styles.navLink} href="/projects">
-						Projects
-					</Link>
-				</li>
-				<li>
-					<Link className={styles.navLink} href="/method">
-						Method
-					</Link>
-				</li>
-				<li>
-					<Link className={`${styles.navLink} ${styles.lastLink}`} href="/about">
-						About
-					</Link>
-				</li>
-			</ul>
-			<div className={styles.pageNavigation}>
-				<a onClick={()=> router.back()}>back</a>
-				<Link href="/projects">projects</Link>
-				<p>/</p>
-				<p>KIKO Milano</p>
-			</div>
-				
+					</a>
+					<Link className={styles.firstBreadcrumbLink} href="/projects">Projects</Link>
+					<p>/</p>
+					<p className={styles.projectName}>KIKO Milano</p>
 				</div>
+			</div>
 		</nav>
 	);
 }

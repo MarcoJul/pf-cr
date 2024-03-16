@@ -7,6 +7,7 @@
 	--dark-light-transparent: rgba(22, 22, 24, 0.7);
 	--menu-width: 321px;
 	--nav-animation-time: .5s;
+	--nav-fade-time: 1.5s;
 	--bg-backdrop: rgba(0, 0, 0, 0.4);
 	--section-border-radius: 30px;
 	--spacing-min: 16px;
