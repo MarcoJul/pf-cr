@@ -6,6 +6,7 @@
 	padding-left: 10vw;
 	min-width: 500px;
 	mix-blend-mode: difference;
+	pointer-events: none;
 }
 
 .textContent {
@@ -13,6 +14,7 @@
 	top: 50%;
 	margin: 50vh 0 50vh;
 	transform: translateY(-50%);
+	pointer-events: all;
 }
 
 .text {
