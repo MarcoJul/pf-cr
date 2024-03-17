@@ -62,7 +62,7 @@
 	height: calc(100% + 75vh);
 	width: 30vw;
 	padding-bottom: 200px;
-	transition: all .5s;
+	transition: margin-right .5s;
 	overflow: clip;
 	z-index: 200;
 }
@@ -73,19 +73,6 @@
 }
 
 @media only screen and (min-width: 2000px) {
-
-	.text {
-		/* width: 20vw; */
-	}
-/* 
-	.secondText {
-		transform: translateX(70vw);
-	} */
-
-	.content{
-		/* padding-left: 104px;
-		margin-left: 20vw; */
-	}
 
 	.imageSection {
 		top: -90vh;

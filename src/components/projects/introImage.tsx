@@ -10,7 +10,7 @@ export default function introImage() {
 					src="/kiko/intro-kiko.jpg"
 				/>
 			</div>
-			<div className={styles.ovalBox}>
+			<div id="oval" className={styles.ovalBox}>
 				<img className={styles.oval} src="/shared/oval.svg" alt=""/>
 			</div>
 		</div>

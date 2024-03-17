@@ -40,35 +40,6 @@ export default function ContainerWrapper({onSetImage}:any) {
 		}
 	})
 
-	const handleScroll = () => {
-		const position = window.scrollY;
-		const windowHeight = window.innerHeight;
-		const windowWidth = window.innerWidth;
-
-		const introTextContent:HTMLElement = document.querySelector('#content')!;
-		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
-
-		if(position > 5000){
-			onSetImage(2);
-		} else if(position < 5000){
-			onSetImage(1);
-		}
-
-		const translationGap = 200;
-
-		if(position >= windowHeight + translationGap && position < windowHeight + translationGap + windowWidth / 2){
-			introTextContent.style.transition = "none";
-			introImageContent.style.transition = "none";
-			introTextContent.style.transform = 'translateX(-' + (position - windowHeight - translationGap) + 'px)';
-			introImageContent.style.transform = 'translateX(-' + (position - windowHeight- translationGap) + 'px)';
-		} else if (position < 1450){
-			introTextContent.style.transform = 'translateX(0px)';
-			introImageContent.style.transform = 'translateX(0px)';
-			introTextContent.style.transition = "all .5s";
-			introImageContent.style.transition = "all .5s";
-		}
-	}
-
 useEffect(() => {
 
 	const position = window.scrollY;
@@ -76,19 +47,12 @@ useEffect(() => {
 
 	setPagePosition(position < windowHeight ? 'top' : 'bottom');
 
-	const introTextContent:HTMLElement = document.querySelector('#content')!;
-	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
+		// if(position > 5000){
+		// 	onSetImage(2);
+		// } else if(position < 5000){
+		// 	onSetImage(1);
+		// }
 
-	if(windowHeight - 100 < position ){
-		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-	}
-
-	window.addEventListener('scroll', handleScroll, { passive: true });
-
-	return () => {
-			window.removeEventListener('scroll', handleScroll);
-	};
 }, []);
 
 

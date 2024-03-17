@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${bricolageGrotesque.variable} ${inter.variable} ${syne.variable}`}>
+			<body suppressHydrationWarning={true} className={`${bricolageGrotesque.variable} ${inter.variable} ${syne.variable}`}>
 				{children}
 				<Navigation />
 				{/* <Grid /> */}
