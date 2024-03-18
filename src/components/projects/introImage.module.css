@@ -10,6 +10,12 @@
 	transform-origin: right;
 }
 
+.secondImage {
+	margin-left: -150%;
+	z-index: 5;
+	opacity: 0;
+}
+
 .boxImage {
 	z-index: 10;
 	width: 24.6vw;

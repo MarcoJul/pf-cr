@@ -34,6 +34,15 @@ export default function Intro( {isFullPage} : IIntroProps) {
 				scrub: true,
 			}
 		});
+		gsap.to("#second-image", {
+			opacity: '1',
+			scrollTrigger: {
+				trigger: '#ref-container',
+				start: '400px top',
+				end: '600px',
+				scrub: true,
+			}
+		});
 	});
 
 	return (

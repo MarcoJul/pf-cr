@@ -7,7 +7,13 @@ export default function introImage() {
 				<img
 					className={styles.coverImage}
 					alt="kiko intro image"
-					src="/kiko/intro-kiko.jpg"
+					src="/kiko/intro-first.jpg"
+				/>
+				<img
+					className={`${styles.coverImage} ${styles.secondImage}`}
+					alt="kiko intro image"
+					src="/kiko/intro-second.jpg"
+					id="second-image"
 				/>
 			</div>
 			<div id="oval" className={styles.ovalBox}>
