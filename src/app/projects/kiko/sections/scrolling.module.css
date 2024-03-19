@@ -1,34 +1,12 @@
 .scrollingSection {
-  height: 500px;
-  border: 3px solid blue;
-  position: relative;
-  display: flex;
-  max-width: 100%;
-  overflow: hidden;
-  background: linear-gradient(269.78deg, #A8353B 1.55%, #EE856E 50.32%, #C11490 99.09%);
-  
+	position: relative;
+	display: flex;
+	max-width: 100%;
+	overflow: hidden;
+	margin-bottom: 90px;
 }
-/* 
-.marquee {
-  white-space: nowrap;
-  animation: marquee 30s linear infinite;
-  max-width: none;
-}
-
-.marquee p {
-  -webkit-mask-image: url(/shared/icon-bag.svg);
-  mask-image: url(/shared/icon-bag.svg);
-} */
 
 .logo {
-  clip-path: url(#kiko);
+	height: 3.5vw;
+	width: auto;
 }
-/* 
-@keyframes marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-20%, 0);
-  }
-} */

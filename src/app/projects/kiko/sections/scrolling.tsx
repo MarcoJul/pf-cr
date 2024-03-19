@@ -1,19 +1,25 @@
 import Image from "next/image";
-import styles from "./scrolling.module.css"
+import styles from "./scrolling.module.css";
+import Marquee from "react-fast-marquee";
 
 export default function Scrolling() {
-  return (
-    <section className={styles.scrollingSection}>
-      <div className={styles.marquee}>
-      <Image
-        className={styles.logo}
-					alt='kiko-logo'
-					width={237}
-					height={135}
-					src="/kiko/logo-kiko.svg"
-					priority
-			/>
-     </div>
-    </section>
-  );
+	return (
+		<section className={styles.scrollingSection}>
+			<Marquee>
+				{[0, 1, 2].map(logo=>{
+					return (
+						<Image
+							key={logo}
+							className={styles.logo}
+							alt='kiko-logo'
+							width={1572}
+							height={56}
+							src="/kiko/logo-kiko-gradient.svg"
+							priority
+						/>
+					)
+				})}
+			</Marquee>
+		</section>
+	);
 }
