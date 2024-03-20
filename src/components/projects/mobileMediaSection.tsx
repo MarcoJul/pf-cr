@@ -26,7 +26,6 @@ export default function MobileMediaSection ({ media1, media2, media3, poster, id
 			scrollTrigger: {
 				trigger: `#${idSection}`,
 				start: `${startingMargin} bottom`,
-				markers: true,
 				once: true,
 			},
 			duration: 1,
@@ -37,7 +36,6 @@ export default function MobileMediaSection ({ media1, media2, media3, poster, id
 			scrollTrigger: {
 				trigger: `#${idSection}`,
 				start: `${startingMargin} bottom`,
-				// markers: true,
 				once: true,
 			},
 			duration: 1,
@@ -49,7 +47,6 @@ export default function MobileMediaSection ({ media1, media2, media3, poster, id
 			scrollTrigger: {
 				trigger: `#${idSection}`,
 				start: `${startingMargin} bottom`,
-				// markers: true,
 				once: true,
 			},
 			duration: 1,
