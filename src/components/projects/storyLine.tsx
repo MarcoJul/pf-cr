@@ -60,6 +60,7 @@ export default function StoryLine({sectionTitle, mediaUrl, column, textContent, 
 							{col.contentImage && 
 							<Image
 								alt="kiko intro image"
+								className={styles.contentImage}
 								width={217}
 								height={76}
 								src={col.contentImage}

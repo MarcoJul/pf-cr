@@ -72,3 +72,8 @@
 	line-height: var(--font-body-line-height);
 	letter-spacing: var(--font-body-letter-spacing);
 }
+
+.column:has(.contentImage)  {
+	flex-grow: 10;
+	align-items: flex-end;
+}
