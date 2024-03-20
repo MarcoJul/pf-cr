@@ -16,12 +16,22 @@
 	border-radius: var(--mobile-media-border-radius);
 	width: 19vw;
 	height: auto;
+	opacity: 0;
+	animation: all 1s ease-in;
+}
+
+.video {
+	transform: translateY(50px);
+}
+
+.image:nth-last-of-type(3) {
+	transform: translateY(50px);
 }
 
 .image:nth-last-of-type(2) {
-	transform: translateY(80px);
+	transform: translateY(180px);
 }
 
 img.image:nth-last-of-type(1) {
-	transform: translateY(160px);
+	transform: translateY(260px);
 }

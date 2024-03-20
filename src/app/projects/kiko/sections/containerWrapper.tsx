@@ -84,11 +84,13 @@ useEffect(() => {
 						media1="/kiko/storyLine/2020_app1.jpg"
 						media2="/kiko/storyLine/2020_app2.jpg"
 						media3="/kiko/storyLine/2020_app3.jpg"
+						idSection='first-mobile-section'
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2020_tryon1.jpg"
 						media2="/kiko/storyLine/2020_tryon2.jpg"
 						media3="/kiko/storyLine/2020_tryon3.jpg"
+						idSection='second-mobile-section'
 					/>
 				</div>
 				<div ref={thirdRef} id="unified-commerce">
@@ -107,6 +109,7 @@ useEffect(() => {
 						media2="/kiko/storyLine/2023_HP_mobile2.jpg"
 						media3="/kiko/storyLine/2023_HP_mobile3.jpg"
 						poster="/kiko/storyLine/2023_HP_mobile1_poster.jpg"
+						idSection='third-mobile-section'
 					/>
 					<StoryLine
 						mediaUrl="/kiko/storyLine/2023_HP_desktop.mp4"
@@ -122,6 +125,7 @@ useEffect(() => {
 						media2="/kiko/storyLine/2023_PDP_mobile2.jpg"
 						media3="/kiko/storyLine/2023_PDP_mobile3.jpg"
 						poster="/kiko/storyLine/2023_PDP_mobile1_poster.jpg"
+						idSection='fourth-mobile-section'
 					/>
 					<StoryLine
 						mediaUrl="/kiko/storyLine/2023_PDP_desktop.mp4"
@@ -131,6 +135,7 @@ useEffect(() => {
 						media1="/kiko/storyLine/2023_PDP_mobile4.jpg"
 						media2="/kiko/storyLine/2023_PDP_mobile5.jpg"
 						media3="/kiko/storyLine/2023_PDP_mobile6.jpg"
+						idSection='fifth-mobile-section'
 					/>
 				</div>
 				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>
