@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './storyLine.module.css'
+import styles from './imageText.module.css'
 import type { TextContent } from '@/types';
 
 interface IStoryLine {
