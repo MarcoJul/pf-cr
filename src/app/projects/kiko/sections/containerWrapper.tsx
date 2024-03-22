@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Intro from './intro';
 import Scrolling from './scrolling';
-import StoryLine from '@/components/projects/storyLine';
+import ImageText from '@/components/projects/imageText';
 import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
 import MobileMediaSection from '@/components/projects/mobileMediaSection';
 import { useInView } from "react-intersection-observer";
@@ -63,22 +63,25 @@ useEffect(() => {
 			<Scrolling />
 			<div className={styles.storyLineContainer}>
 				<div ref={firstRef} id="ecommerce-redesign">
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={content1}
 						mediaUrl="/kiko/storyLine/2019_stylegudeD.png"
+						idSection="first-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						column={2}
 						textContent={content2}
 						mediaUrl="/kiko/storyLine/2019_mockup.png"
+						idSection="second-imageText"
 					/>
 				</div>
 				<div ref={secondRef} id="evolutive-roadmap">
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={content3}
 						mediaUrl="/kiko/storyLine/2020_appArch.png"
+						idSection="third-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2020_app1.jpg"
@@ -94,15 +97,17 @@ useEffect(() => {
 					/>
 				</div>
 				<div ref={thirdRef} id="unified-commerce">
-					<StoryLine
+					<ImageText
 						column={2}
 						textContent={content4}
 						mediaUrl='/kiko/storyLine/2023_trioD.png'
+						idSection="fourth-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={contentX}
 						mediaUrl="/kiko/storyLine/2023_conceptD.png"
+						idSection="fifth-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_HP_mobile1.mp4"
@@ -111,14 +116,16 @@ useEffect(() => {
 						poster="/kiko/storyLine/2023_HP_mobile1_poster.jpg"
 						idSection='third-mobile-section'
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl="/kiko/storyLine/2023_HP_desktop.mp4"
 						poster="/kiko/storyLine/2023_HP_desktop_poster.jpg"
+						idSection="sixth-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl='/kiko/storyLine/2023_CardTop.png'
 						secondMedia={true}
 						secondMediaUrl='/kiko/storyLine/2023_CardBottom.png'
+						idSection="seventh-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_PDP_mobile1.mp4"
@@ -127,9 +134,10 @@ useEffect(() => {
 						poster="/kiko/storyLine/2023_PDP_mobile1_poster.jpg"
 						idSection='fourth-mobile-section'
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl="/kiko/storyLine/2023_PDP_desktop.mp4"
 						poster="/kiko/storyLine/2023_PDP_desktop_poster.jpg"
+						idSection="eighth-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_PDP_mobile4.jpg"
