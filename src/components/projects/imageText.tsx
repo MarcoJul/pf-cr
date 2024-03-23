@@ -32,16 +32,18 @@ export default function ImageText({ mediaUrl, column, textContent, secondMedia, 
 			},
 			duration: 1,
 		});
-		gsap.to(`#${idSection}-text`, {
-			opacity: '1',
-			transform: 'translateY(0)',
-			scrollTrigger: {
-				trigger: `#${idSection}-text-container`,
-				start: `50% bottom`,
-				once: true,
-			},
-			duration: 1,
-		});
+		if(textContent){
+			gsap.to(`#${idSection}-text`, {
+				opacity: '1',
+				transform: 'translateY(0)',
+				scrollTrigger: {
+					trigger: `#${idSection}-text-container`,
+					start: `50% bottom`,
+					once: true,
+				},
+				duration: 1,
+			});
+		}
 	});
 
 	setTimeout(()=>{
