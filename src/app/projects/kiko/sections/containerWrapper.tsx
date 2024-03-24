@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Intro from './intro';
-import Scrolling from './scrolling';
+import Scrolling from '@/components/projects/scrollingText';
 import ImageText from '@/components/projects/imageText';
 import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
 import MobileMediaSection from '@/components/projects/mobileMediaSection';

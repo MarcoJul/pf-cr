@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./scrolling.module.css";
+import styles from "./scrollingText.module.css";
 import Marquee from "react-fast-marquee";
 
 export default function Scrolling() {
