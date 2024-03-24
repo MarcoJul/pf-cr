@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react';
 import styles from './containerWrapper.module.css';
 import Intro from './intro';
-import Scrolling from './scrolling';
-import StoryLine from '@/components/projects/storyLine';
+import Scrolling from '@/components/projects/scrollingText';
+import ImageText from '@/components/projects/imageText';
 import { content1,content2, content3, content4, contentX } from '@/textContent/kiko';
 import MobileMediaSection from '@/components/projects/mobileMediaSection';
 import { useInView } from "react-intersection-observer";
@@ -40,35 +40,6 @@ export default function ContainerWrapper({onSetImage}:any) {
 		}
 	})
 
-	const handleScroll = () => {
-		const position = window.scrollY;
-		const windowHeight = window.innerHeight;
-		const windowWidth = window.innerWidth;
-
-		const introTextContent:HTMLElement = document.querySelector('#content')!;
-		const introImageContent: HTMLElement = document.querySelector('#image-content')!;
-
-		if(position > 5000){
-			onSetImage(2);
-		} else if(position < 5000){
-			onSetImage(1);
-		}
-
-		const translationGap = 200;
-
-		if(position >= windowHeight + translationGap && position < windowHeight + translationGap + windowWidth / 2){
-			introTextContent.style.transition = "none";
-			introImageContent.style.transition = "none";
-			introTextContent.style.transform = 'translateX(-' + (position - windowHeight - translationGap) + 'px)';
-			introImageContent.style.transform = 'translateX(-' + (position - windowHeight- translationGap) + 'px)';
-		} else if (position < 1450){
-			introTextContent.style.transform = 'translateX(0px)';
-			introImageContent.style.transform = 'translateX(0px)';
-			introTextContent.style.transition = "all .5s";
-			introImageContent.style.transition = "all .5s";
-		}
-	}
-
 useEffect(() => {
 
 	const position = window.scrollY;
@@ -76,19 +47,12 @@ useEffect(() => {
 
 	setPagePosition(position < windowHeight ? 'top' : 'bottom');
 
-	const introTextContent:HTMLElement = document.querySelector('#content')!;
-	const introImageContent: HTMLElement = document.querySelector('#image-content')!;
+		// if(position > 5000){
+		// 	onSetImage(2);
+		// } else if(position < 5000){
+		// 	onSetImage(1);
+		// }
 
-	if(windowHeight - 100 < position ){
-		introTextContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-		introImageContent.style.transform = 'translateX(-' + (windowHeight-100) + 'px)';
-	}
-
-	window.addEventListener('scroll', handleScroll, { passive: true });
-
-	return () => {
-			window.removeEventListener('scroll', handleScroll);
-	};
 }, []);
 
 
@@ -99,74 +63,87 @@ useEffect(() => {
 			<Scrolling />
 			<div className={styles.storyLineContainer}>
 				<div ref={firstRef} id="ecommerce-redesign">
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={content1}
 						mediaUrl="/kiko/storyLine/2019_stylegudeD.png"
+						idSection="first-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						column={2}
 						textContent={content2}
 						mediaUrl="/kiko/storyLine/2019_mockup.png"
+						idSection="second-imageText"
 					/>
 				</div>
 				<div ref={secondRef} id="evolutive-roadmap">
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={content3}
 						mediaUrl="/kiko/storyLine/2020_appArch.png"
+						idSection="third-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2020_app1.jpg"
 						media2="/kiko/storyLine/2020_app2.jpg"
 						media3="/kiko/storyLine/2020_app3.jpg"
+						idSection='first-mobile-section'
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2020_tryon1.jpg"
 						media2="/kiko/storyLine/2020_tryon2.jpg"
 						media3="/kiko/storyLine/2020_tryon3.jpg"
+						idSection='second-mobile-section'
 					/>
 				</div>
 				<div ref={thirdRef} id="unified-commerce">
-					<StoryLine
+					<ImageText
 						column={2}
 						textContent={content4}
 						mediaUrl='/kiko/storyLine/2023_trioD.png'
+						idSection="fourth-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						column={3}
 						textContent={contentX}
 						mediaUrl="/kiko/storyLine/2023_conceptD.png"
+						idSection="fifth-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_HP_mobile1.mp4"
 						media2="/kiko/storyLine/2023_HP_mobile2.jpg"
 						media3="/kiko/storyLine/2023_HP_mobile3.jpg"
 						poster="/kiko/storyLine/2023_HP_mobile1_poster.jpg"
+						idSection='third-mobile-section'
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl="/kiko/storyLine/2023_HP_desktop.mp4"
 						poster="/kiko/storyLine/2023_HP_desktop_poster.jpg"
+						idSection="sixth-imageText"
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl='/kiko/storyLine/2023_CardTop.png'
 						secondMedia={true}
 						secondMediaUrl='/kiko/storyLine/2023_CardBottom.png'
+						idSection="seventh-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_PDP_mobile1.mp4"
 						media2="/kiko/storyLine/2023_PDP_mobile2.jpg"
 						media3="/kiko/storyLine/2023_PDP_mobile3.jpg"
 						poster="/kiko/storyLine/2023_PDP_mobile1_poster.jpg"
+						idSection='fourth-mobile-section'
 					/>
-					<StoryLine
+					<ImageText
 						mediaUrl="/kiko/storyLine/2023_PDP_desktop.mp4"
 						poster="/kiko/storyLine/2023_PDP_desktop_poster.jpg"
+						idSection="eighth-imageText"
 					/>
 					<MobileMediaSection
 						media1="/kiko/storyLine/2023_PDP_mobile4.jpg"
 						media2="/kiko/storyLine/2023_PDP_mobile5.jpg"
 						media3="/kiko/storyLine/2023_PDP_mobile6.jpg"
+						idSection='fifth-mobile-section'
 					/>
 				</div>
 				<AnchorMenu firstActive={firstBlockInView} secondActive={secondBlockInView} thirdActive={thirdBlockInView}/>

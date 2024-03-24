@@ -2,12 +2,17 @@
 	position: sticky;
 	height: 525px;
 	top: 25%;
-	margin-bottom: 10vh;
 }
 
 .coverImage {
-	transform: scale(1.10);
+	transform: scale(1.15);
 	transform-origin: right;
+}
+
+.secondImage {
+	margin-left: -150%;
+	z-index: 5;
+	opacity: 0;
 }
 
 .boxImage {

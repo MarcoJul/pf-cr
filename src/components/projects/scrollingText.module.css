@@ -1,0 +1,12 @@
+.scrollingSection {
+	position: relative;
+	display: flex;
+	max-width: 100%;
+	overflow: hidden;
+	margin-bottom: 90px;
+}
+
+.logo {
+	height: 3.5vw;
+	width: auto;
+}
