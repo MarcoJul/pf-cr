@@ -1,6 +1,6 @@
 import Data from "./data";
 import styles from "./intro.module.css";
-import  IntroImage  from "@/components/projects/introImage";
+import IntroImage  from "@/components/projects/introImage";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

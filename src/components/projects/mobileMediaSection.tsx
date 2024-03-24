@@ -14,6 +14,9 @@ interface IMobileMediaSection {
 
 export default function MobileMediaSection ({ media1, media2, media3, poster, idSection }: IMobileMediaSection) {
 
+	gsap.registerPlugin(useGSAP);
+	gsap.registerPlugin(ScrollTrigger);
+	
 	const startingMargin = '300px';
 
 	useGSAP(() => {
