@@ -8,6 +8,9 @@ import { content1,content2, content3, content4, contentX } from '@/textContent/k
 import MobileMediaSection from '@/components/projects/mobileMediaSection';
 import { useInView } from "react-intersection-observer";
 import AnchorMenu from '@/components/nav/anchorMenu';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ContainerWrapper({onSetImage}:any) {
 	const [contentIsFullPage, setContentIsFullPage] = useState<boolean>(false);
@@ -20,6 +23,32 @@ export default function ContainerWrapper({onSetImage}:any) {
 	})
 	const {ref: thirdRef, inView : thirdBlockInView} = useInView({
 		rootMargin: '-50%'
+	})
+
+	gsap.registerPlugin(useGSAP);
+	gsap.registerPlugin(ScrollTrigger);
+
+	useGSAP(() => {
+		gsap.to(`#hero`, {
+			scrollTrigger: {
+				trigger: `#wrapper`,
+				start: `200px top`,
+				end: `90% bottom`,
+				scrub:true,
+				onEnter:() =>{
+					onSetImage(0)
+				},
+				onEnterBack:() =>{
+					onSetImage(0)
+				},
+				onLeaveBack: () => {
+					onSetImage(1)
+				},
+				onLeave: () => {
+					onSetImage(2)
+				}
+			},
+		});
 	})
 
 	const {ref: introContainerRef } = useInView({
@@ -47,17 +76,11 @@ useEffect(() => {
 
 	setPagePosition(position < windowHeight ? 'top' : 'bottom');
 
-		// if(position > 5000){
-		// 	onSetImage(2);
-		// } else if(position < 5000){
-		// 	onSetImage(1);
-		// }
-
 }, []);
 
 
 	return (
-		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`}>
+		<div className={`${styles.containerWrapper} ${contentIsFullPage? styles.fullPage : ''}`} id="wrapper">
 			<div ref={introContainerRef} className={styles.intersectionRef}></div>
 			<Intro isFullPage={contentIsFullPage}/>
 			<Scrolling />

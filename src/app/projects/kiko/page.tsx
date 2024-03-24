@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import ContainerWrapper from "./sections/containerWrapper";
 import { useState } from "react";
+import OutroImage from "@/components/projects/outroImage";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -16,7 +18,7 @@ export default function Home() {
 		<main className={styles.main}>
 			<section 
 				id="hero" 
-				className={`${styles.hero} ${introImage === 1 ? styles.firstImage: styles.secondImage}`}
+				className={`${styles.hero} ${introImage === 0 ? '' : introImage === 1 ? styles.firstImage : styles.secondImage}`}
 			>
 				{introImage === 1 ?
 					<div className={styles.heroTextBox}>
@@ -26,8 +28,21 @@ export default function Home() {
 					:
 					<div className={styles.heroTextBox}>
 						<h1 className={styles.title}>Game7 Athletics</h1>
-						<Link className={styles.navLink}  href="/project/g7a">View Project</Link>
+						<Link className={styles.navLink}  href="/project/g7a">
+							<span>View Project</span>
+							<Image
+								src="/shared/icon-arrow-right.svg"
+								className={styles.linkIcon}
+								alt="Go to homepage"
+								width={24}
+								height={24}
+								priority
+							/>
+						</Link>
 					</div>
+				}
+				{introImage === 2 && 
+					<OutroImage />
 				}
 			</section>
 			<ContainerWrapper onSetImage={setImage}/>
